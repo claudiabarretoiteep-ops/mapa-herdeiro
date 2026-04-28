@@ -1,0 +1,95 @@
+{
+    "socialLinks": [
+        {
+            "id": "instagram",
+            "name": "Instagram",
+            "icon": "instagram",
+            "url": "https://www.instagram.com/rabinomarcosbarreto.oficial/",
+            "description": "Continua no Mapa."
+        },
+        {
+            "id": "youtube",
+            "name": "YouTube",
+            "icon": "youtube",
+            "url": "https://www.youtube.com/@rabinomarcosbarreto",
+            "description": "Aprofunde a Direção."
+        },
+        {
+            "id": "whatsapp",
+            "name": "WhatsApp",
+            "icon": "whatsapp",
+            "url": "https://chat.whatsapp.com/GklHlN6ObdAJcOEwauT0dB",
+            "description": "Entre na Sala do Mapa"
+        },
+        {
+            "id": "spotify",
+            "name": "Spotify",
+            "icon": "spotify",
+            "url": "https://open.spotify.com/playlist/4ah0aFXCTNLe8d4A7bvbGL",
+            "description": "Claresa para quem deseja maturidade"
+        },
+        {
+            "id": "tiktok",
+            "name": "TikTok",
+            "icon": "tiktok",
+            "url": "https://www.tiktok.com/@ravmarcosbarreto?_r=1&_t=ZS-94MpOUsYYQn",
+            "description": "Conteúdo direto ao ponto."
+        }
+    ],
+    "sessions": [
+        {
+            "slug": "vcs-nao-esta-perdido",
+            "title": "Eixo | Sessão de Realinhamento Guiado",
+            "subtitle": "Você Não Está Perdido. Está Desalinhado.",
+            "alignmentAudio": "/eixos/audio/eixo/vcs-nao-esta-perdido/intro.mp3",
+            "fullBookAudio": "/eixos/audio/eixo/vcs-nao-esta-perdido/full-book.mp3",
+            "description": "Um recurso em áudio para aprofundar a leitura, trazer clareza ao diagnóstico e ajudar você a transformar diagnóstico em direção.",
+            "coverUrl": "/eixos/images/eixo/v3/eixo0.png"
+        },
+        {
+            "slug": "fe-herdada-ou-compreendida",
+            "title": "Eixo 1 | Sessão de Realinhamento",
+            "subtitle": "Fé Herdada ou Fé Compreendida?",
+            "alignmentAudio": "/eixos/audio/eixo/fe-herdada-ou-compreendida/intro.mp3",
+            "fullBookAudio": "/eixos/audio/eixo/fe-herdada-ou-compreendida/full-book.mp3",
+            "description": "Sair da repetição religiosa e entrar em entendimento com fundamento.",
+            "coverUrl": "/eixos/images/eixo/v3/eixo1.png"
+        },
+        {
+            "slug": "promessa-nao-e-estrutura",
+            "title": "Eixo 2 | Sessão de Realinhamento",
+            "subtitle": "Promessa Não É Estrutura",
+            "alignmentAudio": "/eixos/audio/eixo/promessa-nao-e-estrutura/intro.mp3",
+            "fullBookAudio": "/eixos/audio/eixo/promessa-nao-e-estrutura/full-book.mp3",
+            "description": "Por que potencial sem ordem gera frustração.",
+            "coverUrl": "/eixos/images/eixo/v3/eixo2.png"
+        },
+        {
+            "slug": "governo-comeca-dentro",
+            "title": "Eixo 3 | Sessão de Realinhamento",
+            "subtitle": "Governo Começa Dentro",
+            "alignmentAudio": "/eixos/audio/eixo/governo-comeca-dentro/intro.mp3",
+            "fullBookAudio": "/eixos/audio/eixo/governo-comeca-dentro/full-book.mp3",
+            "description": "O caminho do governo interior para alinhar decisões.",
+            "coverUrl": "/eixos/images/eixo/v3/eixo3.png"
+        },
+        {
+            "slug": "prosperar-sem-culpa",
+            "title": "Eixo 4 | Sessão de Realinhamento",
+            "subtitle": "Prosperar Sem Culpa",
+            "alignmentAudio": "/eixos/audio/eixo/prosperar-sem-culpa/intro.mp3",
+            "fullBookAudio": "/eixos/audio/eixo/prosperar-sem-culpa/full-book.mp3",
+            "description": "Uma visão bíblica para crescer com paz e maturidade.",
+            "coverUrl": "/eixos/images/eixo/v3/eixo4.png"
+        },
+        {
+            "slug": "teshuva-o-retorno-ao-eixo",
+            "title": "Eixo 5 | Sessão de Realinhamento",
+            "subtitle": "Teshuvá: O Retorno ao Eixo",
+            "alignmentAudio": "/eixos/audio/eixo/teshuva-o-retorno-ao-eixo/intro.mp3",
+            "fullBookAudio": "/eixos/audio/eixo/teshuva-o-retorno-ao-eixo/full-book.mp3",
+            "description": "Como voltar ao lugar certo.",
+            "coverUrl": "/eixos/images/eixo/v3/eixo5.png"
+        }
+    ]
+}

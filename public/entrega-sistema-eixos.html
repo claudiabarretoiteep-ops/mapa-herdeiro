@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Jornada Começa Agora — Sistema de Realinhamento do Herdeiro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F5F1E8;
+            color: #6B7280;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        /* ─── Header ─── */
+        .header {
+            background: linear-gradient(135deg, #1B3B5F 0%, #122842 100%);
+            padding: 48px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(212,175,55,0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 20%, rgba(212,175,55,0.05) 0%, transparent 40%);
+        }
+
+        .header * { position: relative; z-index: 1; }
+
+        .header-badge {
+            display: inline-block;
+            background: rgba(212,175,55,0.1);
+            border: 1px solid rgba(212,175,55,0.2);
+            border-radius: 50px;
+            padding: 6px 18px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #D4AF37;
+            margin-bottom: 24px;
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #FFFFFF;
+            line-height: 1.2;
+            margin-bottom: 8px;
+        }
+
+        .header h1 span { color: #D4AF37; }
+
+        .header p {
+            color: rgba(255,255,255,0.5);
+            font-size: 13px;
+            margin-top: 12px;
+        }
+
+        /* ─── Body ─── */
+        .body {
+            background: #FFFFFF;
+            padding: 40px;
+        }
+
+        /* ─── Welcome ─── */
+        .welcome {
+            text-align: center;
+            margin-bottom: 36px;
+            padding-bottom: 36px;
+            border-bottom: 1px solid #F0EDE5;
+        }
+
+        .welcome h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #1B3B5F;
+            margin-bottom: 12px;
+        }
+
+        .welcome p {
+            font-size: 14px;
+            color: #6B7280;
+            max-width: 460px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .welcome .highlight {
+            color: #1B3B5F;
+            font-weight: 600;
+        }
+
+        /* ─── Instructions ─── */
+        .instructions {
+            background: #FDFCF7;
+            border: 1px solid #F0EDE5;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 36px;
+        }
+
+        .instructions h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 15px;
+            font-weight: 700;
+            color: #1B3B5F;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .instructions ol {
+            list-style: none;
+            counter-reset: steps;
+        }
+
+        .instructions ol li {
+            counter-increment: steps;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 13px;
+            color: #6B7280;
+            line-height: 1.5;
+        }
+
+        .instructions ol li::before {
+            content: counter(steps);
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: rgba(212,175,55,0.1);
+            border: 1px solid rgba(212,175,55,0.2);
+            color: #D4AF37;
+            font-size: 11px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .instructions ol li strong {
+            color: #1B3B5F;
+        }
+
+        /* ─── Eixos Grid ─── */
+        .eixos-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #1B3B5F;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .eixos-title span {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: #D4AF37;
+            margin-bottom: 8px;
+        }
+
+        .eixo-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: #FDFCF7;
+            border: 1px solid #F0EDE5;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .eixo-card:hover {
+            border-color: rgba(212,175,55,0.3);
+            box-shadow: 0 2px 12px rgba(27,59,95,0.05);
+            transform: translateY(-1px);
+        }
+
+        .eixo-number {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFFFF;
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .eixo-number.e0 { background: linear-gradient(135deg, #9ca3af, #6b7280); }
+        .eixo-number.e1 { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+        .eixo-number.e2 { background: linear-gradient(135deg, #f97316, #ea580c); }
+        .eixo-number.e3 { background: linear-gradient(135deg, #6366f1, #4f46e5); }
+        .eixo-number.e4 { background: linear-gradient(135deg, #D4AF37, #A6892B); }
+        .eixo-number.e5 { background: linear-gradient(135deg, #10b981, #059669); }
+
+        .eixo-info { flex: 1; }
+
+        .eixo-info .eixo-label {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #9CA3AF;
+        }
+
+        .eixo-info h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 15px;
+            font-weight: 700;
+            color: #1B3B5F;
+            margin: 2px 0;
+        }
+
+        .eixo-info .eixo-sub {
+            font-size: 12px;
+            color: #9CA3AF;
+            font-style: italic;
+        }
+
+        .eixo-arrow {
+            flex-shrink: 0;
+            color: #D4AF37;
+            font-size: 18px;
+        }
+
+        .eixo-tag {
+            flex-shrink: 0;
+            font-size: 9px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 4px 10px;
+            border-radius: 50px;
+        }
+
+        .eixo-tag.free {
+            background: rgba(16,185,129,0.1);
+            color: #059669;
+            border: 1px solid rgba(16,185,129,0.2);
+        }
+
+        .eixo-tag.paid {
+            background: rgba(212,175,55,0.1);
+            color: #A6892B;
+            border: 1px solid rgba(212,175,55,0.2);
+        }
+
+        /* ─── Divider ─── */
+        .divider {
+            height: 1px;
+            background: #F0EDE5;
+            margin: 36px 0;
+        }
+
+        /* ─── Support ─── */
+        .support {
+            text-align: center;
+            padding: 24px;
+            background: #FDFCF7;
+            border: 1px solid #F0EDE5;
+            border-radius: 12px;
+            margin-top: 36px;
+        }
+
+        .support h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 15px;
+            font-weight: 700;
+            color: #1B3B5F;
+            margin-bottom: 8px;
+        }
+
+        .support p {
+            font-size: 12px;
+            color: #9CA3AF;
+            line-height: 1.6;
+        }
+
+        .support a {
+            color: #D4AF37;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* ─── Quote ─── */
+        .quote {
+            text-align: center;
+            margin: 36px 0;
+            padding: 24px 32px;
+            border-left: 3px solid #D4AF37;
+            background: rgba(212,175,55,0.03);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .quote p {
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            font-style: italic;
+            color: #1B3B5F;
+            line-height: 1.5;
+        }
+
+        .quote .author {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-style: normal;
+            color: #9CA3AF;
+            margin-top: 8px;
+        }
+
+        /* ─── Ecosystem ─── */
+        .ecosystem {
+            background: #1B3B5F;
+            padding: 40px 32px;
+            text-align: center;
+        }
+
+        .ecosystem h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #D4AF37;
+            margin-bottom: 6px;
+        }
+
+        .ecosystem .subtitle {
+            font-size: 12px;
+            color: rgba(255,255,255,0.45);
+            margin-bottom: 24px;
+        }
+
+        .eco-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 400px;
+            margin: 0 auto 28px;
+        }
+
+        .eco-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 10px;
+            padding: 12px 16px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .eco-link:hover {
+            background: rgba(212,175,55,0.1);
+            border-color: rgba(212,175,55,0.2);
+            transform: translateY(-1px);
+        }
+
+        .eco-link .eco-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .eco-link .eco-text {
+            text-align: left;
+        }
+
+        .eco-link .eco-text strong {
+            display: block;
+            font-size: 13px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .eco-link .eco-text span {
+            font-size: 11px;
+            color: rgba(255,255,255,0.4);
+        }
+
+        .eco-social {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .eco-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.2s;
+        }
+
+        .eco-social a:hover {
+            transform: translateY(-2px);
+        }
+
+        .eco-social .ig:hover { background: #E1306C; }
+        .eco-social .yt:hover { background: #FF0000; }
+        .eco-social .wp:hover { background: #25D366; }
+
+        /* ─── Footer ─── */
+        .footer {
+            background: #122842;
+            padding: 24px 40px;
+            text-align: center;
+        }
+
+        .footer p {
+            color: rgba(255,255,255,0.2);
+            font-size: 11px;
+        }
+
+        .footer .brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 14px;
+            color: rgba(255,255,255,0.3);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        /* ─── Responsive ─── */
+        @media (max-width: 640px) {
+            .header { padding: 36px 24px; }
+            .header h1 { font-size: 24px; }
+            .body { padding: 28px 20px; }
+            .eixo-card { padding: 14px 16px; }
+            .eixo-info .eixo-sub { display: none; }
+        }
+
+        /* ─── Print / PDF ─── */
+        @media print {
+            body { background: #fff; }
+            .container { max-width: 100%; }
+
+            .header, .body, .instructions, .welcome,
+            .eixos-title, .quote, .support, .ecosystem, .footer {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            .eixo-card {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            /* Mantém os 6 eixos juntos como bloco */
+            .eixos-title {
+                break-after: avoid;
+                page-break-after: avoid;
+            }
+
+            /* Ecossistema + footer juntos no final */
+            .ecosystem {
+                break-before: auto;
+                page-break-before: auto;
+            }
+
+            .footer {
+                break-before: avoid;
+                page-break-before: avoid;
+            }
+
+            /* Remove hover effects */
+            .eixo-card:hover, .eco-link:hover, .eco-social a:hover {
+                transform: none;
+                background: inherit;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- ═══ HEADER ═══ -->
+        <div class="header">
+            <div class="header-badge">✦ Acesso Liberado</div>
+            <h1>Sistema de Realinhamento<br><span>do Herdeiro</span></h1>
+            <p>Os Eixos do Herdeiro — Eixos 0 a 5 | Leitura + Áudio + Ativação</p>
+        </div>
+
+        <!-- ═══ BODY ═══ -->
+        <div class="body">
+
+            <!-- Welcome -->
+            <div class="welcome">
+                <h2>Sua jornada começa agora.</h2>
+                <p>
+                    Parabéns por tomar essa decisão. A partir de agora, você tem acesso ao
+                    <span class="highlight">Sistema Completo de Realinhamento</span> —
+                    6 Eixos progressivos que vão te reposicionar em clareza, direção e governo.
+                </p>
+            </div>
+
+            <!-- Instructions -->
+            <div class="instructions">
+                <h3>📋 Como acessar seus Eixos</h3>
+                <ol>
+                    <li>
+                        <strong>Clique no eixo</strong> que deseja acessar na lista abaixo.
+                    </li>
+                    <li>
+                        Na página de leitura, <strong>informe o e-mail usado na compra</strong> para liberar o acesso.
+                    </li>
+                    <li>
+                        <strong>Siga a ordem dos eixos</strong> — cada um prepara o terreno para o próximo.
+                    </li>
+                    <li>
+                        Você tem <strong>acesso vitalício</strong>. Volte quantas vezes quiser.
+                    </li>
+                </ol>
+            </div>
+
+            <!-- Eixos -->
+            <div class="eixos-title">
+                <span>Seus Eixos</span>
+                Acesse sua jornada completa
+            </div>
+
+            <!-- Eixo 0 -->
+            <a href="https://mapadoherdeiro.com.br/eixos/#/leitura?eixo=0" class="eixo-card" target="_blank">
+                <div class="eixo-number e0">0</div>
+                <div class="eixo-info">
+                    <div class="eixo-label">Eixo 0</div>
+                    <h4>Despertar</h4>
+                    <div class="eixo-sub">Você não está perdido. Está desalinhado.</div>
+                </div>
+                <span class="eixo-tag free">Bônus</span>
+                <span class="eixo-arrow">→</span>
+            </a>
+
+            <!-- Eixo 1 -->
+            <a href="https://mapadoherdeiro.com.br/eixos/#/leitura?eixo=1" class="eixo-card" target="_blank">
+                <div class="eixo-number e1">1</div>
+                <div class="eixo-info">
+                    <div class="eixo-label">Eixo 1 — Consciência</div>
+                    <h4>Fé herdada ou fé compreendida?</h4>
+                    <div class="eixo-sub">Saia da repetição religiosa e entre em entendimento.</div>
+                </div>
+                <span class="eixo-tag paid">Liberado</span>
+                <span class="eixo-arrow">→</span>
+            </a>
+
+            <!-- Eixo 2 -->
+            <a href="https://mapadoherdeiro.com.br/eixos/#/leitura?eixo=2" class="eixo-card" target="_blank">
+                <div class="eixo-number e2">2</div>
+                <div class="eixo-info">
+                    <div class="eixo-label">Eixo 2 — Confronto</div>
+                    <h4>Promessa não é estrutura.</h4>
+                    <div class="eixo-sub">Encare os padrões que estão travando sua vida.</div>
+                </div>
+                <span class="eixo-tag paid">Liberado</span>
+                <span class="eixo-arrow">→</span>
+            </a>
+
+            <!-- Eixo 3 -->
+            <a href="https://mapadoherdeiro.com.br/eixos/#/leitura?eixo=3" class="eixo-card" target="_blank">
+                <div class="eixo-number e3">3</div>
+                <div class="eixo-info">
+                    <div class="eixo-label">Eixo 3 — Direção</div>
+                    <h4>Governo começa dentro.</h4>
+                    <div class="eixo-sub">Pare de reagir e comece a decidir.</div>
+                </div>
+                <span class="eixo-tag paid">Liberado</span>
+                <span class="eixo-arrow">→</span>
+            </a>
+
+            <!-- Eixo 4 -->
+            <a href="https://mapadoherdeiro.com.br/eixos/#/leitura?eixo=4" class="eixo-card" target="_blank">
+                <div class="eixo-number e4">4</div>
+                <div class="eixo-info">
+                    <div class="eixo-label">Eixo 4 — Governo</div>
+                    <h4>Prosperar sem culpa.</h4>
+                    <div class="eixo-sub">Quebre a teologia da escassez com base bíblica.</div>
+                </div>
+                <span class="eixo-tag paid">Liberado</span>
+                <span class="eixo-arrow">→</span>
+            </a>
+
+            <!-- Eixo 5 -->
+            <a href="https://mapadoherdeiro.com.br/eixos/#/leitura?eixo=5" class="eixo-card" target="_blank">
+                <div class="eixo-number e5">5</div>
+                <div class="eixo-info">
+                    <div class="eixo-label">Eixo 5 — Expansão</div>
+                    <h4>Teshuvá: O retorno ao eixo.</h4>
+                    <div class="eixo-sub">Saia do modo sobrevivência e entre em construção.</div>
+                </div>
+                <span class="eixo-tag paid">Liberado</span>
+                <span class="eixo-arrow">→</span>
+            </a>
+
+            <!-- Quote -->
+            <div class="quote">
+                <p>"Você não está travado por falta de fé — está travado por uma fé mal ensinada."</p>
+                <div class="author">— Rabino Marcos Barreto</div>
+            </div>
+
+            <!-- Support -->
+            <div class="support">
+                <h3>Precisa de ajuda?</h3>
+                <p>
+                    Se tiver qualquer dúvida sobre o acesso, entre em contato pelo e-mail
+                    <a href="mailto:claudiabarreto.iteep@gmail.com">claudiabarreto.iteep@gmail.com</a>
+                    ou pelo WhatsApp.
+                </p>
+                <p style="margin-top: 12px; font-size: 11px; color: #D4AF37; font-weight: 600;">
+                    Lembre-se: use o mesmo e-mail da compra para acessar os eixos.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- ═══ ECOSSISTEMA ═══ -->
+        <div class="ecosystem">
+            <h3>Conheça o Ecossistema</h3>
+            <div class="subtitle">Mapa do Herdeiro — Rabino Marcos Barreto</div>
+
+            <div class="eco-links">
+                <a href="https://chat.whatsapp.com/GklHlN6ObdAJcOEwauT0dB" class="eco-link" target="_blank">
+                    <div class="eco-icon" style="background: rgba(37,211,102,0.15); color: #25D366;">💬</div>
+                    <div class="eco-text">
+                        <strong>Sala do Mapa — Grupo WhatsApp</strong>
+                        <span>Entre na comunidade gratuita de realinhamento</span>
+                    </div>
+                </a>
+
+                <a href="https://mapadoherdeiro.com.br/eixos/#/diagnostico" class="eco-link" target="_blank">
+                    <div class="eco-icon" style="background: rgba(139,92,246,0.15); color: #8B5CF6;">🧬</div>
+                    <div class="eco-text">
+                        <strong>DNA do Herdeiro</strong>
+                        <span>Diagnóstico gratuito do seu perfil espiritual</span>
+                    </div>
+                </a>
+
+                <a href="https://mapadoherdeiro.com.br/eixos/#/revelacao" class="eco-link" target="_blank">
+                    <div class="eco-icon" style="background: rgba(245,158,11,0.15); color: #F59E0B;">📖</div>
+                    <div class="eco-text">
+                        <strong>A Revelação do Herdeiro</strong>
+                        <span>A aula que muda a forma como você lê Gálatas 4</span>
+                    </div>
+                </a>
+
+                <a href="https://mapadoherdeiro.com.br/eixos/#/sistema" class="eco-link" target="_blank">
+                    <div class="eco-icon" style="background: rgba(16,185,129,0.15); color: #10B981;">📚</div>
+                    <div class="eco-text">
+                        <strong>Coleção Eixos do Herdeiro</strong>
+                        <span>Os 6 eixos de realinhamento completos</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Social -->
+            <div class="eco-social">
+                <a href="https://www.instagram.com/rabinomarcosbarreto.oficial/" target="_blank" rel="noopener noreferrer" class="ig" title="Instagram">
+                    📸
+                </a>
+                <a href="https://www.youtube.com/prmarcosbarreto" target="_blank" rel="noopener noreferrer" class="yt" title="YouTube">
+                    🎬
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=5537991494464&text=Ol%C3%A1%20Pra.%20Cl%C3%A1udia!%20Vim%20pelo%20Mapa%20do%20Herdeiro." target="_blank" rel="noopener noreferrer" class="wp" title="WhatsApp">
+                    💬
+                </a>
+            </div>
+        </div>
+
+        <!-- ═══ FOOTER ═══ -->
+        <div class="footer">
+            <div class="brand">Mapa do Herdeiro</div>
+            <p>Rabino Marcos Barreto — Todos os direitos reservados</p>
+            <p style="margin-top: 8px;">Este é um e-mail de entrega de produto. Você recebeu porque adquiriu o Sistema de Realinhamento do Herdeiro.</p>
+        </div>
+
+    </div>
+</body>
+</html>

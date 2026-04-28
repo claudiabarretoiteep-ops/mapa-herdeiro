@@ -46,18 +46,20 @@ const FormSection = () => {
                 fetch(webhookUrl, {
                     method: 'POST',
                     mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         name: formData.name,
                         email: formData.email,
                         whatsapp: formData.whatsapp,
-                        source: 'landing_page'
+                        source: 'landing_page',
+                        status: 'LeadMagnet'
                     })
-                }).catch(err => console.error('Erro Webhook Google:', err));
+                })
+                    .then(() => console.log('Sinal enviado ao Google!'))
+                    .catch(err => console.error('Erro ao conectar com Google:', err));
             }
 
             setStatus('success');
-            console.log('Lead salvo com sucesso!');
+            console.log('Lead saved successfully!');
 
             // Redirecionar para página de obrigado via Hash
             setTimeout(() => {
@@ -74,16 +76,21 @@ const FormSection = () => {
 
     if (status === 'success') {
         return (
-            <section id="baixar" className="py-20 bg-neutral-parchment relative">
+            <section className="py-20 bg-neutral-parchment relative">
                 <div className="container mx-auto px-4 max-w-2xl text-center">
                     <div className="bg-white p-12 rounded-lg shadow-xl border-t-4 border-secondary">
                         <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-6" />
-                        <h3 className="text-3xl font-serif text-primary mb-4">Presente Enviado!</h3>
+                        <h3 className="text-3xl font-serif text-primary mb-4">Seu e-book está a caminho!</h3>
                         <p className="text-lg text-neutral-sage mb-8">
-                            Verifique sua caixa de entrada (e spam). O guia "Você Não Está Perdido. Está Desalinhado" já está a caminho.
+                            Verifique sua caixa de entrada, spam ou promoções. O guia "Você Não Está Perdido. Está DESALINHADO" já foi enviado.
                         </p>
-                        <a href="https://l.instagram.com/?u=https%3A%2F%2Fbit.ly%2F496Zk_SaladoMapaGrupoSecreto%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGn1aV3l-cy1Y7XXdCp5WAQXt_TLjKPQ_P-ZvJEK8Smw0xa1IHzE00dIROGiEc_aem_2mC6U8UJROuFWz0q0cWkmQ&e=AT4XbQqkD-n2xvFMPgUX6aibMCNdkDu5ofID_fOLBfT28pWigFMa61EOee54cxblZaTjY5IrT6wncUQWeohtPiINqZzuKwJ5gb10kY-vvQ" target="_blank" rel="noopener noreferrer" className="btn-primary inline-flex items-center gap-2">
-                            Entrar para a Sala do Mapa (WhatsApp)
+                        <div className="bg-secondary/5 p-6 rounded-xl border border-secondary/20 mb-8">
+                            <p className="text-sm text-primary font-medium italic">
+                                "Ao receber o e-book, você entra na lista prioritária para a abertura da Sala do Mapa | Turma Fundadora."
+                            </p>
+                        </div>
+                        <a href="https://bit.ly/496Zk_SaladoMapaGrupoSecreto" target="_blank" rel="noopener noreferrer" className="btn-primary inline-flex items-center gap-2">
+                            Entrar na Lista Prioritária (WhatsApp)
                         </a>
                     </div>
                 </div>
@@ -107,11 +114,11 @@ const FormSection = () => {
                         <ul className="space-y-4 text-sm text-primary/80">
                             <li className="flex gap-2">
                                 <CheckCircle className="w-5 h-5 text-secondary" />
-                                <span>Download imediato em PDF</span>
+                                <span>Entrega exclusiva via E-mail</span>
                             </li>
                             <li className="flex gap-2">
                                 <CheckCircle className="w-5 h-5 text-secondary" />
-                                <span>Acesso à Sala do Mapa</span>
+                                <span>Prioridade na Turma Fundadora</span>
                             </li>
                             <li className="flex gap-2">
                                 <CheckCircle className="w-5 h-5 text-secondary" />
@@ -130,42 +137,50 @@ const FormSection = () => {
                                 </div>
                             )}
                             <div>
-                                <label className="block text-xs font-bold text-neutral-sage uppercase tracking-wider mb-2">Nome Completo</label>
+                                <label className="block text-xs font-bold text-neutral-sage uppercase tracking-wider mb-2">Nome</label>
                                 <input
                                     type="text"
                                     name="name"
+                                    id="name"
                                     required
-                                    placeholder="Seu nome completo"
+                                    placeholder="Seu primeiro nome"
                                     className="input-field"
                                     value={formData.name}
                                     onChange={handleChange}
+                                    aria-label="Seu nome"
                                 />
                             </div>
 
                             <div>
-                                <label className="block text-xs font-bold text-neutral-sage uppercase tracking-wider mb-2">Melhor E-mail</label>
+                                <label htmlFor="email" className="block text-xs font-bold text-neutral-sage uppercase tracking-wider mb-2">Melhor E-mail</label>
                                 <input
                                     type="email"
                                     name="email"
+                                    id="email"
                                     required
                                     placeholder="seu@email.com"
                                     className="input-field"
                                     value={formData.email}
                                     onChange={handleChange}
+                                    aria-label="Seu melhor e-mail"
                                 />
                             </div>
 
                             <div>
-                                <label className="block text-xs font-bold text-neutral-sage uppercase tracking-wider mb-2">WhatsApp</label>
+                                <label htmlFor="whatsapp" className="block text-xs font-bold text-neutral-sage uppercase tracking-wider mb-2">WhatsApp (opcional)</label>
                                 <input
                                     type="tel"
                                     name="whatsapp"
-                                    required
+                                    id="whatsapp"
                                     placeholder="(XX) 9XXXX-XXXX"
                                     className="input-field"
                                     value={formData.whatsapp}
                                     onChange={handleChange}
+                                    aria-label="Seu número de WhatsApp"
                                 />
+                                <p className="text-[10px] text-neutral-sage/60 mt-1">
+                                    Opcional — para receber prioridade e avisos da Turma Fundadora no WhatsApp.
+                                </p>
                             </div>
 
                             <div className="flex items-start gap-3 pt-2">
@@ -179,17 +194,18 @@ const FormSection = () => {
                                     onChange={handleChange}
                                 />
                                 <label htmlFor="lgpd" className="text-xs text-gray-500 leading-snug cursor-pointer">
-                                    Concordo em receber o material e comunicações da Mapa do Herdeiro. Você pode cancelar a qualquer momento.
+                                    Ao se cadastrar, você concorda em receber conteúdos do Mapa do Herdeiro. Você pode sair quando quiser.
                                 </label>
                             </div>
 
                             <button
                                 type="submit"
                                 disabled={status === 'loading'}
-                                className="w-full btn-primary flex justify-center items-center gap-2 group disabled:opacity-70"
+                                className="w-full btn-primary flex justify-center items-center gap-2 group disabled:opacity-70 min-h-[56px]"
+                                aria-label="Receber guia por e-mail agora"
                             >
-                                {status === 'loading' ? 'Enviando...' : 'QUERO RECEBER O EBOOK'}
-                                {status !== 'loading' && <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />}
+                                {status === 'loading' ? 'Enviando...' : 'RECEBER O E-BOOK POR E-MAIL'}
+                                {status !== 'loading' && <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />}
                             </button>
                         </form>
                     </div>

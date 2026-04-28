@@ -10,7 +10,8 @@ const Qualificacao = ({ onBack }) => {
         q1_dor_principal: '',
         q2_prosperidade: '',
         q3_perfil: '',
-        q4_texto_livre: ''
+        q4_texto_livre: '',
+        q5_fase_vida: ''
     });
 
     const handleEmailSubmit = async (e) => {
@@ -66,6 +67,16 @@ const Qualificacao = ({ onBack }) => {
             };
             if (perfilTags[formData.q3_perfil]) tags.push(perfilTags[formData.q3_perfil]);
 
+            // Tags Q5 (Fase de Vida)
+            const idadeTags = {
+                '18_24': 'idade_18_24',
+                '25_34': 'idade_25_34',
+                '35_44': 'idade_35_44',
+                '45_54': 'idade_45_54',
+                '55_plus': 'idade_55_plus'
+            };
+            if (idadeTags[formData.q5_fase_vida]) tags.push(idadeTags[formData.q5_fase_vida]);
+
             // 2. Lógica de Temperatura
             let novaTemperatura = 'Morno';
             const isEstrategico = ['lider', 'empresario'].includes(formData.q3_perfil);
@@ -100,8 +111,8 @@ const Qualificacao = ({ onBack }) => {
                     expectativas: formData.q4_texto_livre,
                     tags: finalTags,
                     status: finalStatus,
-                    temperatura: novaTemperatura
-                    // Removido ultima_interacao pois a coluna pode não existir
+                    temperatura: novaTemperatura,
+                    fase_vida: formData.q5_fase_vida
                 })
                 .eq('email', leadEmail.toLowerCase().trim());
 
@@ -113,19 +124,22 @@ const Qualificacao = ({ onBack }) => {
                 fetch(webhookUrl, {
                     method: 'POST',
                     mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         email: leadEmail,
-                        nome: currentLead?.name,
-                        perfil_aluno: formData.q3_perfil,
+                        name: currentLead?.name,
+                        whatsapp: currentLead?.whatsapp || '',
+                        perfil: formData.q3_perfil,
                         dor_principal: formData.q1_dor_principal,
                         prosperidade: formData.q2_prosperidade,
                         expectativas: formData.q4_texto_livre,
+                        fase_vida: formData.q5_fase_vida,
                         tags: finalTags.join(', '),
                         temperatura: novaTemperatura,
                         status: finalStatus
                     })
-                }).catch(err => console.error('Erro Webhook Google:', err));
+                })
+                    .then(() => console.log('Dados do diagnóstico enviados!'))
+                    .catch(err => console.error('Erro ao conectar com Google:', err));
             }
 
             setStep(3);
@@ -300,6 +314,33 @@ const Qualificacao = ({ onBack }) => {
                                         maxLength={100}
                                         className="w-full p-5 bg-white border border-neutral-200 rounded-2xl outline-none focus:ring-2 focus:ring-[#D4AF37]/20 transition-all font-medium text-sm shadow-sm"
                                     />
+                                </div>
+
+                                {/* Q5 (OPCIONAL) - Fase de Vida */}
+                                <div className="space-y-4">
+                                    <label className="block text-sm font-bold text-[#1B3B5F]">Em que fase de vida você está hoje?</label>
+                                    <div className="grid grid-cols-1 gap-2">
+                                        {[
+                                            { id: '18_24', label: '18–24 (começando a vida adulta)' },
+                                            { id: '25_34', label: '25–34 (construindo base/família/carreira)' },
+                                            { id: '35_44', label: '35–44 (consolidando e liderando)' },
+                                            { id: '45_54', label: '45–54 (reorganizando prioridades)' },
+                                            { id: '55_plus', label: '55+ (legado e maturidade)' },
+                                            { id: 'oculto', label: 'Prefiro não dizer' }
+                                        ].map((opt) => (
+                                            <label key={opt.id} className={`flex items-center gap-3 p-4 rounded-xl border-2 cursor-pointer transition-all active:scale-[0.98] ${formData.q5_fase_vida === opt.id ? 'bg-[#1B3B5F]/5 border-[#D4AF37]' : 'border-neutral-100 bg-white'}`}>
+                                                <input
+                                                    type="radio"
+                                                    name="q5"
+                                                    value={opt.id}
+                                                    checked={formData.q5_fase_vida === opt.id}
+                                                    onChange={(e) => setFormData({ ...formData, q5_fase_vida: e.target.value })}
+                                                    className="accent-[#D4AF37] h-4 w-4"
+                                                />
+                                                <span className="text-xs font-bold text-[#1B3B5F]/90">{opt.label}</span>
+                                            </label>
+                                        ))}
+                                    </div>
                                 </div>
 
                                 <button

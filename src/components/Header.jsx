@@ -11,38 +11,85 @@ const Header = () => {
                 <div className="flex items-center gap-2">
                     <BookOpen className="w-8 h-8 text-secondary" />
                     <span className="font-serif text-xl font-bold text-primary tracking-wide leading-none">
-                        ACESSO À SALA DO MAPA
+                        MAPA DO HERDEIRO
                     </span>
                 </div>
 
                 {/* Desktop Menu */}
                 <nav className="hidden md:flex gap-8 items-center">
-                    <a href="#inicio" className="text-primary hover:text-secondary transition-colors font-medium">Início</a>
-                    <a href="#sobre" className="text-primary hover:text-secondary transition-colors font-medium">Sobre</a>
-                    <a href="#contato" className="text-primary hover:text-secondary transition-colors font-medium">Contato</a>
-                    <a href="#baixar" className="btn-primary py-2 px-6 text-xs">
-                        Baixar Ebook
-                    </a>
+                    <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="bg-transparent border-none cursor-pointer text-primary hover:text-secondary transition-colors font-medium">Início</button>
+                    <button onClick={() => {
+                        const el = document.getElementById('sobre');
+                        if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
+                    }} className="bg-transparent border-none cursor-pointer text-primary hover:text-secondary transition-colors font-medium">Sobre</button>
+                    <button onClick={() => {
+                        const el = document.getElementById('baixar');
+                        if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
+                    }} className="bg-transparent border-none cursor-pointer text-primary hover:text-secondary transition-colors font-medium">Contato</button>
+                    <button
+                        onClick={() => {
+                            const element = document.getElementById('baixar');
+                            if (element) {
+                                const offset = 80;
+                                const bodyRect = document.body.getBoundingClientRect().top;
+                                const elementRect = element.getBoundingClientRect().top;
+                                const elementPosition = elementRect - bodyRect;
+                                const offsetPosition = elementPosition - offset;
+
+                                window.scrollTo({
+                                    top: offsetPosition,
+                                    behavior: 'smooth'
+                                });
+                            }
+                        }}
+                        className="bg-secondary hover:bg-secondary-dark text-white font-bold py-2 px-6 rounded-lg text-xs border-none cursor-pointer transition-all active:scale-95 shadow-md"
+                    >
+                        Receber o e-book
+                    </button>
                 </nav>
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden text-primary"
+                    className="md:hidden text-primary p-2"
                     onClick={() => setIsOpen(!isOpen)}
+                    aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
                 >
-                    {isOpen ? <X /> : <Menu />}
+                    {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                 </button>
             </div>
 
             {/* Mobile Menu */}
             {isOpen && (
                 <div className="md:hidden bg-white border-t border-gray-100 absolute w-full p-4 flex flex-col gap-4 shadow-lg">
-                    <a href="#inicio" className="block text-primary py-2" onClick={() => setIsOpen(false)}>Início</a>
-                    <a href="#sobre" className="block text-primary py-2" onClick={() => setIsOpen(false)}>Sobre</a>
-                    <a href="#contato" className="block text-primary py-2" onClick={() => setIsOpen(false)}>Contato</a>
-                    <a href="#baixar" className="btn-primary text-center block" onClick={() => setIsOpen(false)}>
-                        Baixar Ebook
-                    </a>
+                    <button onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); setIsOpen(false); }} className="text-left text-primary py-2 bg-transparent border-none cursor-pointer">Início</button>
+                    <button onClick={() => {
+                        const el = document.getElementById('sobre');
+                        if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
+                        setIsOpen(false);
+                    }} className="text-left text-primary py-2 bg-transparent border-none cursor-pointer">Sobre</button>
+                    <button onClick={() => {
+                        const el = document.getElementById('baixar');
+                        if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
+                        setIsOpen(false);
+                    }} className="text-left text-primary py-2 bg-transparent border-none cursor-pointer">Contato</button>
+                    <button onClick={() => {
+                        const element = document.getElementById('baixar');
+                        if (element) {
+                            const offset = 80;
+                            const bodyRect = document.body.getBoundingClientRect().top;
+                            const elementRect = element.getBoundingClientRect().top;
+                            const elementPosition = elementRect - bodyRect;
+                            const offsetPosition = elementPosition - offset;
+
+                            window.scrollTo({
+                                top: offsetPosition,
+                                behavior: 'smooth'
+                            });
+                        }
+                        setIsOpen(false);
+                    }} className="bg-secondary hover:bg-secondary-dark text-white font-bold py-3 rounded-lg text-center block w-full border-none cursor-pointer shadow-lg outline-none">
+                        Receber o e-book
+                    </button>
                 </div>
             )}
         </header>

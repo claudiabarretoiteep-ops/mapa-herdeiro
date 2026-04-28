@@ -1,61 +1,68 @@
-import React from 'react';
-import { Search, BookOpen, Sprout, Scale, CheckCircle2 } from 'lucide-react';
+import { Search, Headphones, Sprout, Settings2, CheckCircle2, BookOpen } from 'lucide-react';
+import innerVisual from '../assets/saladomapa_lp2-COIddP1G-DRyFnT4h.webp';
 
 const Features = () => {
     return (
-        <section id="sobre" className="py-20 bg-white">
+        <section className="py-20 bg-white">
             <div className="container mx-auto px-4">
 
                 {/* Parte 1: Por que este material? */}
                 <div className="max-w-4xl mx-auto text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl mb-6 text-primary">Você é herdeiro. Mas vive como órfão?</h2>
+                    <h2 className="text-3xl md:text-4xl mb-6 text-primary">Uma Experiência de Sabedoria Digital</h2>
                     <p className="text-lg text-neutral-sage">
-                        Muitos buscam, mas poucos encontram o alinhamento real. Identifique se você está vivendo abaixo do que foi desenhado para você.
+                        Muito mais que um livro digital, você está acessando um portal de realinhamento projetado para sua jornada de herdeiro.
                     </p>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
                     <FeatureCard
-                        icon={<Search className="w-8 h-8 text-secondary" />}
-                        title="Sente falta de algo"
-                        description="Você ama a D'us, mas sente que poderia estar vivendo uma realidade espiritual mais profunda."
+                        icon={<BookOpen className="w-8 h-8 text-secondary" />}
+                        title="Leitura Premium"
+                        description="Acesse o conteúdo em um leitor digital estilo Kindle, otimizado para qualquer tela."
                     />
                     <FeatureCard
-                        icon={<BookOpen className="w-8 h-8 text-secondary" />}
-                        title="Estudo sem encaixe"
-                        description="Lê a Bíblia há anos, mas parece que as peças do quebra-cabeça ainda não se uniram totalmente."
+                        icon={<Settings2 className="w-8 h-8 text-secondary" />}
+                        title="Conforto Visual"
+                        description="Ajuste o tamanho da letra e escolha temas (Claro, Sépia ou Noite) para sua leitura."
+                    />
+                    <FeatureCard
+                        icon={<Headphones className="w-8 h-8 text-secondary" />}
+                        title="Leitura Imersiva"
+                        description="Ouça o conteúdo completo do livro enquanto lê, potencializando o aprendizado."
                     />
                     <FeatureCard
                         icon={<Sprout className="w-8 h-8 text-secondary" />}
-                        title="Raízes Hebraicas"
-                        description="Quer entender sua identidade original de herdeiro através da perspectiva judaica de Jesus."
-                    />
-                    <FeatureCard
-                        icon={<Scale className="w-8 h-8 text-secondary" />}
-                        title="Alinhamento Total"
-                        description="Busca coerência entre sua vida espiritual, emocional e sua realidade financeira."
+                        title="Eixo de Alinhamento"
+                        description="Reflexões guiadas em áudio pelo Rabino exclusivas para cada etapa da jornada."
                     />
                 </div>
 
                 {/* Parte 2: O que você vai descobrir */}
-                <div className="bg-neutral-parchment rounded-lg p-8 md:p-12 shadow-inner border border-secondary/20">
-                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div className="bg-neutral-parchment rounded-lg p-6 md:p-10 shadow-inner border border-secondary/20 max-w-5xl mx-auto">
+                    <div className="grid md:grid-cols-2 gap-8 items-center">
                         <div>
-                            <h3 className="text-2xl md:text-3xl mb-6 text-primary">Neste presente, você vai descobrir:</h3>
-                            <ul className="space-y-4">
+                            <h3 className="text-2xl md:text-[1.75rem] mb-6 text-primary leading-tight">Nesta experiência, você vai descobrir:</h3>
+                            <ul className="space-y-3">
                                 <CheckItem text="Os 7 sinais de desalinhamento (e como identificar cada um)" />
                                 <CheckItem text="O conceito de herança na perspectiva hebraica original" />
                                 <CheckItem text="Primeiros passos práticos para o realinhamento imediato" />
                                 <CheckItem text="Como as raízes hebraicas mudam sua leitura da Bíblia" />
-                                <CheckItem text="Acesso exclusivo à Sala do Mapa (comunidade no WhatsApp)" />
+                                <CheckItem text="Acesso prioritário à abertura da Sala do Mapa | Turma Fundadora." />
                             </ul>
                         </div>
 
-                        {/* Visual placeholder for inside the book */}
-                        <div className="hidden md:block relative h-64 bg-white rounded shadow-md border-l-4 border-secondary p-6 rotate-2 hover:rotate-0 transition-transform duration-500">
-                            <div className="h-full flex flex-col justify-center items-center text-center opacity-50">
-                                <BookOpen className="w-16 h-16 text-primary mb-4" />
-                                <span className="font-serif italic">Preview do Conteúdo</span>
+                        {/* Visual Horizontal do Ebook */}
+                        <div className="hidden md:flex justify-center items-center">
+                            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border border-secondary/20">
+                                <img
+                                    src={innerVisual}
+                                    alt="Visualização das páginas internas do Leitor Digital"
+                                    width="800"
+                                    height="450"
+                                    loading="lazy"
+                                    decoding="async"
+                                    className="w-full h-auto transform hover:scale-105 transition-transform duration-700"
+                                />
                             </div>
                         </div>
                     </div>

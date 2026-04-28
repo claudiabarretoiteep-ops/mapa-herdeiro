@@ -13,18 +13,24 @@ const AdminLogin = ({ onNavigate }) => {
         setError('');
 
         try {
+            console.log('Tentando login para:', email);
             const { data, error } = await supabase.auth.signInWithPassword({
                 email,
                 password,
             });
 
-            if (error) throw error;
+            if (error) {
+                console.error('Erro no Supabase:', error.message);
+                throw error;
+            }
 
+            console.log('Login realizado com sucesso!');
             if (onNavigate) onNavigate('#/admin/dashboard');
         } catch (error) {
+            console.error('Falha no Login Administrador:', error);
             setError(error.message === 'Invalid login credentials'
-                ? 'Email ou senha incorretos.'
-                : 'Erro ao fazer login. Tente novamente.');
+                ? 'Email ou senha incorretos. (Verifique se este email foi cadastrado como ADMIN no Supabase).'
+                : `Erro: ${error.message}`);
         } finally {
             setLoading(false);
         }

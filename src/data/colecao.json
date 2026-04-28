@@ -1,0 +1,178 @@
+{
+    "colecao": "Série Eixos do Herdeiro",
+    "autor": "Rabino Marcos Barreto",
+    "mentor": "Mentor Espiritual",
+    "author_title": "Autoridade com propósito.",
+    "author_bio": "Teólogo e psicanalista com mais de duas décadas de imersão nos originais hebraicos. Sua voz não é sobre entretenimento gospel, mas sobre o resgate da identidade do Herdeiro através do fundamento.",
+    "author_cta": "Na Sala do Mapa, ele lidera uma jornada de realinhamento para aqueles que cansaram da superficialidade e decidiram governar a partir da verdade eterna.",
+    "eixos": [
+        {
+            "id": 0,
+            "titulo": "Você não está Perdido. Está desalinhado.",
+            "subtitulo": "Um ensaio conciso e prático sobre maturidade espiritual e governo interior.",
+            "capa_v1": "/eixos/images/eixo/v3/eixo0.png",
+            "capa_v2": "/eixos/images/eixo/v3/eixo0.png",
+            "context_image": "/eixos/images/eixo/sage_eixo0.png",
+            "isbn": "N/A - Disponível Gratuitamente",
+            "voomp_link": "#",
+            "audio_status": "concluido",
+            "ebook_status": "pronto",
+            "arco": "você está desalinhado",
+            "isbn_doc": "C:/Users/Claudia/.gemini/antigravity/scratch/SALA_DO_MAPA_CENTRAL/EIXOS/EIXO_0/ISBN_COLECAO_CBL.pdf",
+            "capitulos": [
+                "Yashar: a raiz explicada",
+                "A Lei da Nachalá",
+                "Da'at: Yeshua como o Da'at vivo",
+                "Mishtar: José como modelo",
+                "Teshuvá: O Filho Pródigo"
+            ],
+            "discoveries": [
+                "Os 7 sinais de desalinhamento (e como identificar cada um)",
+                "O conceito de herança na perspectiva hebraica original",
+                "Primeiros passos práticos para o realinhamento imediato",
+                "Como as raízes hebraicas mudam sua leitura da Bíblia",
+                "Acesso prioritário à abertura da Sala do Mapa | Turma Fundadora."
+            ]
+        },
+        {
+            "id": 1,
+            "titulo": "Fé herdada ou | fé compreendida?",
+            "subtitulo": "Como sair da repetição religiosa e entrar em entendimento com fundamento, clareza e direção.",
+            "capa_v1": "/eixos/images/eixo/v3/eixo1.png",
+            "capa_v2": "/eixos/images/eixo/v3/eixo1.png",
+            "context_image": "/eixos/images/eixo/sage_eixo1.png",
+            "isbn": "Em andamento (5-6 dias)",
+            "voomp_link": "https://pay.voompcreators.com.br/11814",
+            "audio_status": "layout_pronto",
+            "ebook_status": "pronto",
+            "arco": "sua fé precisa de raiz",
+            "isbn_doc": "C:/Users/Claudia/.gemini/antigravity/scratch/SALA_DO_MAPA_CENTRAL/EIXOS/EIXO_1/ISBN_COLECAO_CBL.pdf",
+            "capitulos": [
+                "Emunah: A Estrutura da Firma",
+                "Da'at: Conhecimento que Transforma",
+                "Shemá: Internalizar para Praticar",
+                "Avodah: O Teste da Vida Real",
+                "Bitachon: A Progressão da Confiança"
+            ],
+            "discoveries": [
+                "A raiz da confusão espiritual e como identificar o fundamento falso.",
+                "O conceito de Emunah na perspectiva hebraica original.",
+                "Primeiros passos práticos para o realinhamento intelectual.",
+                "Como as raízes hebraicas mudam sua leitura da Bíblia.",
+                "Acesso prioritário à abertura da Sala do Mapa."
+            ]
+        },
+        {
+            "id": 2,
+            "titulo": "Promessa não é | estrutura",
+            "subtitulo": "Por que potencial sem ordem gera frustração — e como transformar promessa em direção prática.",
+            "capa_v1": "/eixos/images/eixo/v3/eixo2.png",
+            "capa_v2": "/eixos/images/eixo/v3/eixo2.png",
+            "context_image": "/eixos/images/eixo/sage_eixo2.png",
+            "isbn": "Pendente",
+            "voomp_link": "https://pay.voompcreators.com.br/13741",
+            "audio_status": "layout_pronto",
+            "ebook_status": "pronto",
+            "arco": "sua promessa precisa de estrutura",
+            "isbn_doc": "C:/Users/Claudia/.gemini/antigravity/scratch/SALA_DO_MAPA_CENTRAL/EIXOS/EIXO_2/ISBN_COLECAO_CBL.pdf",
+            "capitulos": [
+                "Nachalá: herança exige preparo (Lei da Nachalá)",
+                "O padrão de Shimshon: potencial sem ordem (Lei do Koach)",
+                "Chokhmá: o modelo de Shlomo (Estrutural)",
+                "Emet: ritmo, constância e edificação (Lei do Emet)",
+                "Yesod: da promessa à herança (Lei do Yesod)"
+            ],
+            "discoveries": [
+                "Por que ter uma promessa não garante que você chegará nela.",
+                "O perigo do potencial sem ordem (O padrão de Sansão).",
+                "Como construir a estrada estrutural para a sua herança.",
+                "O modelo de Salomão para edificação com sabedoria.",
+                "A Lei do Emet: ritmo e constância na construção."
+            ]
+        },
+        {
+            "id": 3,
+            "titulo": "Governo começa | dentro",
+            "subtitulo": "O caminho do governo interior para alinhar decisões, emoções, rotina e vida prática.",
+            "capa_v1": "/eixos/images/eixo/v3/eixo3.png",
+            "capa_v2": "/eixos/images/eixo/v3/eixo3.png",
+            "context_image": "/eixos/images/eixo/sage_eixo3.png",
+            "isbn": "Pendente",
+            "voomp_link": "https://pay.voompcreators.com.br/13743",
+            "audio_status": "layout_pronto",
+            "ebook_status": "pronto",
+            "arco": "governo começa dentro",
+            "isbn_doc": "C:/Users/Claudia/.gemini/antigravity/scratch/SALA_DO_MAPA_CENTRAL/EIXOS/EIXO_3/ISBN_COLECAO_CBL.pdf",
+            "capitulos": [
+                "Lev: o coração que precisa ser governado",
+                "Mishtar: a ordenação que nasce de dentro",
+                "Ruach: as emoções como território de governo",
+                "Da'at HaAtzmi: conhecer-se para governar-se",
+                "Anavah: humildade como fundamento (Lei da Anavah)"
+            ],
+            "discoveries": [
+                "Como alinhar emoções e decisões à luz do Reino.",
+                "Mishtar: a tecnologia bíblica da ordenação interna.",
+                "O governo do 'Lev' (Coração) como território de conquista.",
+                "Como parar de reagir e começar a conduzir sua rotina.",
+                "A humildade como ferramenta estratégica de governo."
+            ]
+        },
+        {
+            "id": 4,
+            "titulo": "Prosperar sem | culpa",
+            "subtitulo": "Uma visão bíblica para crescer e prosperar com paz, responsabilidade e maturidade diante de D’us.",
+            "capa_v1": "/eixos/images/eixo/v3/eixo4.png",
+            "capa_v2": "/eixos/images/eixo/v3/eixo4.png",
+            "context_image": "/eixos/images/eixo/sage_eixo4.png",
+            "isbn": "Pendente",
+            "voomp_link": "https://pay.voompcreators.com.br/13744",
+            "audio_status": "layout_pronto",
+            "ebook_status": "pronto",
+            "arco": "você tem permissão de prosperar",
+            "isbn_doc": "C:/Users/Claudia/.gemini/antigravity/scratch/SALA_DO_MAPA_CENTRAL/EIXOS/EIXO_4/ISBN_COLECAO_CBL.pdf",
+            "capitulos": [
+                "Baruch: a bênção que D'us planejou",
+                "A teologia da escassez: de onde vem a culpa",
+                "Shalom: prosperidade como inteireza",
+                "Tzedaká: o fruto que não pode ficar só em você",
+                "Ben Melech: a identidade que liberta para prosperar"
+            ],
+            "discoveries": [
+                "A quebra da teologia da escassez e da culpa religiosa.",
+                "O conceito de Baruch: a bênção como capacitacao.",
+                "Prosperidade como Shalom (Inteireza) e não apenas dinheiro.",
+                "A Lei da Tzedaká: como o fruto gera justiça social.",
+                "Identidade de Filho de Rei (Ben Melech) na vida prática."
+            ]
+        },
+        {
+            "id": 5,
+            "titulo": "Teshuvá: | O retorno ao eixo",
+            "subtitulo": "Como voltar ao lugar certo com verdade, responsabilidade e realinhamento diante de D’us.",
+            "capa_v1": "/eixos/images/eixo/v3/eixo5.png",
+            "capa_v2": "/eixos/images/eixo/v3/eixo5.png",
+            "context_image": "/eixos/images/eixo/sage_eixo5.png",
+            "isbn": "Pendente",
+            "voomp_link": "https://pay.voompcreators.com.br/13745",
+            "audio_status": "layout_pronto",
+            "ebook_status": "pronto",
+            "arco": "o retorno ao lugar certo",
+            "isbn_doc": "C:/Users/Claudia/.gemini/antigravity/scratch/SALA_DO_MAPA_CENTRAL/EIXOS/EIXO_5/ISBN_COLECAO_CBL.pdf",
+            "capitulos": [
+                "Teshuvá: o que o retorno realmente significa",
+                "Cheshbon HaNefesh: o inventário da alma",
+                "Hitkalelut: a comunidade que sustenta",
+                "Zikaron: lembrar para não repetir",
+                "Hatzlacha: o florescimento do herdeiro"
+            ],
+            "discoveries": [
+                "O poder transformador da Teshuvá (Retorno ao propósito).",
+                "Como fazer o Cheshbon HaNefesh (Inventário da Alma).",
+                "Zikaron: a importância da memória para não repetir erros.",
+                "Florescimento estruturado (Hatzlacha) após o alinhamento.",
+                "A conclusão do ciclo e o início da maturidade plena."
+            ]
+        }
+    ]
+}

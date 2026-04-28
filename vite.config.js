@@ -4,10 +4,11 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [react()],
+    base: '/eixos/',
     server: {
-        port: 8080,
-        host: true, // Expose to network
-        open: true, // Open browser automatically
+        port: 3000,
+        host: true,
+        open: true,
     },
     build: {
         outDir: 'dist',

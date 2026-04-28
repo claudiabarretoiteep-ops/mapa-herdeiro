@@ -1,4 +1,5 @@
-import { X, Send, User, Mail, Phone, Tag, Thermometer, Clipboard, Save, Trash2 } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { X, Send, User, Mail, Phone, Tag, Thermometer, Clipboard, Save, Trash2, Target } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 
 const LeadDetailModal = ({ lead, onClose, onUpdate }) => {
@@ -164,34 +165,104 @@ const LeadDetailModal = ({ lead, onClose, onUpdate }) => {
                         </div>
                     </div>
 
+                    {/* Diagnóstico & Próximo Passo (V2.2 - Regras Automáticas) */}
+                    <div className="space-y-4 pt-4 border-t border-secondary/20">
+                        <label className="block text-[10px] uppercase font-black text-secondary tracking-widest flex items-center gap-2">
+                            <Target size={14} className="text-secondary" /> Diagnóstico & Próximo Passo Recomendado
+                        </label>
+
+                        {(() => {
+                            const tags = formData.tags || [];
+                            const dorTag = tags.find(t => t.startsWith('dor_'));
+                            const perfilTag = tags.find(t => t.startsWith('perfil_'));
+                            const prospeTag = tags.find(t => t.startsWith('interesse_prosperidade_'));
+
+                            // Motor de Regras
+                            let linha = "Clareza & Contexto";
+                            let ideias = ["Verso com contexto", "Bíblia sem confusão", "Explicação simples"];
+                            let cta = "Sala do Mapa";
+
+                            if (dorTag === 'dor_aplicacao_pratica') {
+                                linha = "Passo & Rotina";
+                                ideias = ["Checklist diário", "Rotina semanal", "Decisão segura em 10 min"];
+                                cta = "Diagnóstico";
+                            } else if (dorTag === 'dor_fe_estagnada') {
+                                linha = "Retomada & Constância";
+                                ideias = ["Protocolo Perdi um Dia", "Recomeço sem culpa", "Consistência espiritual"];
+                                cta = "Sala do Mapa";
+                            } else if (dorTag === 'dor_rotina_oracao_estudo') {
+                                linha = "Hábito & Disciplina";
+                                ideias = ["Plano de 7 dias", "Agenda curta de oração", "Método de leitura"];
+                                cta = "Diagnóstico";
+                            } else if (dorTag === 'dor_proposito') {
+                                linha = "Direção & Identidade";
+                                ideias = ["Mapa de decisões", "Propósito prático", "Identidade/Aliança"];
+                                cta = "Sala do Mapa";
+                            }
+
+                            // Ajustes de Tom por Perfil
+                            const tom = perfilTag === 'perfil_lider' ? " (Foco em Liderança/Condução)" :
+                                perfilTag === 'perfil_empresario' ? " (Foco em Mordomia/Ética)" : "";
+
+                            // Ajuste Prosperidade
+                            const ganchoProsp = (prospeTag === 'interesse_prosperidade_sim' || prospeTag === 'interesse_prosperidade_cautela')
+                                ? " + Gancho de Mordomia Bíblica" : "";
+
+                            return (
+                                <div className="bg-secondary/5 border border-secondary/20 rounded-2xl p-6 space-y-4">
+                                    <div>
+                                        <p className="text-[10px] font-black text-neutral-sage uppercase mb-1">Linha Editorial Sugerida</p>
+                                        <p className="text-sm font-serif font-bold text-primary italic">"{linha}{tom}{ganchoProsp}"</p>
+                                    </div>
+                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                                        {ideias.map((ideia, idx) => (
+                                            <div key={idx} className="bg-white p-3 rounded-xl border border-secondary/10 shadow-sm">
+                                                <p className="text-[9px] font-bold text-neutral-sage uppercase mb-1">Ideia {idx + 1}</p>
+                                                <p className="text-[11px] font-bold text-primary">{ideia}</p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                    <div className="flex items-center justify-between pt-2">
+                                        <p className="text-[10px] font-black text-neutral-sage uppercase">CTA Recomendado:</p>
+                                        <span className="bg-primary text-secondary px-4 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest shadow-sm">
+                                            {cta}
+                                        </span>
+                                    </div>
+                                </div>
+                            );
+                        })()}
+                    </div>
+
                     {/* Respostas da Pesquisa (Qualificação) */}
                     {(lead.perfil_aluno || lead.maior_dificuldade) && (
                         <div className="space-y-4 pt-4 border-t border-neutral-100">
                             <label className="block text-[10px] uppercase font-black text-secondary tracking-widest flex items-center gap-2">
-                                <Clipboard size={14} /> Mapa de Posicionamento Espiritual
+                                <Clipboard size={14} /> Mapa de Qualificação (Perfil)
                             </label>
-                            <div className="grid grid-cols-1 gap-4">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div className="bg-[#FDFCF7] p-4 rounded-xl border border-secondary/10">
                                     <p className="text-[9px] font-bold text-neutral-sage uppercase mb-1">Perfil do Herdeiro</p>
-                                    <p className="text-sm text-primary font-bold">
-                                        {lead.perfil_aluno === '1' ? 'Iniciante: Buscando primeiros passos' :
-                                            lead.perfil_aluno === '2' ? 'Líder: Já ensino ou lidero others' :
-                                                lead.perfil_aluno === '3' ? 'Desalinhado: Vida precisa de ordem' :
-                                                    lead.perfil_aluno === '4' ? 'Investidor: Alinhamento financeiro' :
-                                                        lead.perfil_aluno || 'Não respondido'}
+                                    <p className="text-sm text-primary font-bold lowercase capitalize">
+                                        {lead.perfil_aluno || 'Não respondido'}
                                     </p>
                                 </div>
                                 <div className="bg-[#FDFCF7] p-4 rounded-xl border border-secondary/10">
-                                    <p className="text-[9px] font-bold text-neutral-sage uppercase mb-1">Exerce Liderança?</p>
-                                    <p className="text-sm text-primary font-bold">{lead.perfil_lideranca || 'Não respondido'}</p>
+                                    <p className="text-[9px] font-bold text-neutral-sage uppercase mb-1">Fase de Vida</p>
+                                    <p className="text-sm text-primary font-bold">{lead.fase_vida?.replace('_', '–').replace('plus', '+') || 'Não respondido'}</p>
                                 </div>
-                                <div className="bg-[#FDFCF7] p-4 rounded-xl border border-secondary/10">
-                                    <p className="text-[9px] font-bold text-neutral-sage uppercase mb-1">Maior Dificuldade Atual</p>
-                                    <p className="text-sm text-primary font-medium italic italic">"{lead.maior_dificuldade || 'Não respondido'}"</p>
+                                <div className="bg-[#FDFCF7] p-4 rounded-xl border border-secondary/10 md:col-span-2">
+                                    <p className="text-[9px] font-bold text-neutral-sage uppercase mb-1">Dor Principal</p>
+                                    <p className="text-sm text-primary font-bold">
+                                        {lead.maior_dificuldade === '1' ? 'Dificuldade em entender a linguagem bíblica' :
+                                            lead.maior_dificuldade === '2' ? 'Não sei como aplicar os ensinos no dia a dia' :
+                                                lead.maior_dificuldade === '3' ? 'Sinto que minha fé está estagnada' :
+                                                    lead.maior_dificuldade === '4' ? 'Dificuldade em manter rotina de oração/estudo' :
+                                                        lead.maior_dificuldade === '5' ? 'Dúvidas sobre o meu propósito de vida' : lead.maior_dificuldade || 'Não respondido'}
+                                    </p>
                                 </div>
-                                <div className="bg-[#FDFCF7] p-4 rounded-xl border border-secondary/10">
-                                    <p className="text-[9px] font-bold text-neutral-sage uppercase mb-1">O que espera da Sala do Mapa?</p>
-                                    <p className="text-sm text-primary font-medium italic italic">"{lead.expectativas || 'Não respondido'}"</p>
+                                <div className="bg-[#FDFCF7] p-4 rounded-xl border border-secondary/10 md:col-span-2">
+                                    <p className="text-[9px] font-bold text-neutral-sage uppercase mb-1">Observação (O que quer destravar)</p>
+                                    <p className="text-sm text-primary font-medium italic italic">"{lead.expectativas || 'Nenhuma observação deixada.'}"</p>
                                 </div>
                             </div>
                         </div>

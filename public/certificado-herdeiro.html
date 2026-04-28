@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificado — Instituto Marcos Barreto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            size: A4 portrait;
+            margin: 0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #E8E4DC;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .certificate {
+            width: 210mm;
+            height: 297mm;
+            background: #FDFCF8;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        /* ─── Background texture ─── */
+        .certificate::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background:
+                radial-gradient(circle at 15% 20%, rgba(212,175,55,0.03) 0%, transparent 40%),
+                radial-gradient(circle at 85% 80%, rgba(27,59,95,0.02) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        /* ─── Gold border frame ─── */
+        .border-frame {
+            position: absolute;
+            top: 16mm;
+            left: 16mm;
+            right: 16mm;
+            bottom: 16mm;
+            border: 1px solid rgba(212,175,55,0.25);
+            pointer-events: none;
+        }
+
+        .border-frame::before {
+            content: '';
+            position: absolute;
+            top: 3mm;
+            left: 3mm;
+            right: 3mm;
+            bottom: 3mm;
+            border: 0.5px solid rgba(212,175,55,0.12);
+        }
+
+        /* ─── Corner ornaments ─── */
+        .corner {
+            position: absolute;
+            width: 28px;
+            height: 28px;
+        }
+        .corner::before, .corner::after {
+            content: '';
+            position: absolute;
+            background: #D4AF37;
+        }
+        .corner-tl { top: 16mm; left: 16mm; }
+        .corner-tl::before { top: 0; left: 0; width: 28px; height: 1.5px; }
+        .corner-tl::after { top: 0; left: 0; width: 1.5px; height: 28px; }
+
+        .corner-tr { top: 16mm; right: 16mm; }
+        .corner-tr::before { top: 0; right: 0; width: 28px; height: 1.5px; }
+        .corner-tr::after { top: 0; right: 0; width: 1.5px; height: 28px; }
+
+        .corner-bl { bottom: 16mm; left: 16mm; }
+        .corner-bl::before { bottom: 0; left: 0; width: 28px; height: 1.5px; }
+        .corner-bl::after { bottom: 0; left: 0; width: 1.5px; height: 28px; }
+
+        .corner-br { bottom: 16mm; right: 16mm; }
+        .corner-br::before { bottom: 0; right: 0; width: 28px; height: 1.5px; }
+        .corner-br::after { bottom: 0; right: 0; width: 1.5px; height: 28px; }
+
+        /* ─── Content ─── */
+        .content {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 28mm 30mm 24mm;
+        }
+
+        /* ─── Instituto header ─── */
+        .instituto {
+            text-align: center;
+            margin-bottom: 6mm;
+        }
+
+        .instituto-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 12px;
+            font-weight: 600;
+            color: #1B3B5F;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+        }
+
+        .instituto-line {
+            width: 50px;
+            height: 1px;
+            background: #D4AF37;
+            margin: 10px auto 0;
+        }
+
+        /* ─── Title block ─── */
+        .title-block {
+            text-align: center;
+            margin: 8mm 0 4mm;
+        }
+
+        .title-label {
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: #D4AF37;
+            margin-bottom: 6mm;
+        }
+
+        .title-main {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: #1B3B5F;
+            line-height: 1.25;
+            letter-spacing: 0.02em;
+        }
+
+        .title-sub {
+            font-size: 10px;
+            font-weight: 400;
+            color: #8C9AAB;
+            letter-spacing: 0.08em;
+            margin-top: 5mm;
+            max-width: 360px;
+        }
+
+        /* ─── Gold divider ─── */
+        .gold-divider {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 7mm 0;
+            width: 100%;
+            max-width: 340px;
+        }
+
+        .gold-divider .line {
+            flex: 1;
+            height: 0.5px;
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+        }
+
+        .gold-divider .diamond {
+            width: 6px;
+            height: 6px;
+            background: #D4AF37;
+            transform: rotate(45deg);
+            flex-shrink: 0;
+        }
+
+        /* ─── Certifica text ─── */
+        .certifica-intro {
+            font-size: 10px;
+            color: #8C9AAB;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 4mm;
+        }
+
+        /* ─── Student name ─── */
+        .student-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #1B3B5F;
+            text-align: center;
+            padding: 4mm 0 3mm;
+            border-bottom: 1.5px solid #D4AF37;
+            min-width: 320px;
+            letter-spacing: 0.01em;
+        }
+
+        /* ─── Body text ─── */
+        .body-text {
+            text-align: center;
+            font-size: 11px;
+            color: #6B7280;
+            line-height: 1.9;
+            margin-top: 6mm;
+            max-width: 400px;
+        }
+
+        .body-text strong {
+            color: #1B3B5F;
+            font-weight: 600;
+        }
+
+        /* ─── Modules list ─── */
+        .modules {
+            margin: 5mm 0;
+            text-align: left;
+            max-width: 380px;
+            width: 100%;
+        }
+
+        .module-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 3mm 0;
+            border-bottom: 0.5px solid rgba(212,175,55,0.1);
+            font-size: 10.5px;
+            color: #4B5563;
+        }
+
+        .module-item:last-child { border-bottom: none; }
+
+        .module-bullet {
+            width: 5px;
+            height: 5px;
+            background: #D4AF37;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* ─── Declaration quote ─── */
+        .declaration {
+            text-align: center;
+            margin: 5mm 0;
+            padding: 5mm 20px;
+            max-width: 400px;
+        }
+
+        .declaration p {
+            font-family: 'Playfair Display', serif;
+            font-size: 12px;
+            font-style: italic;
+            color: #1B3B5F;
+            line-height: 1.7;
+            opacity: 0.8;
+        }
+
+        /* ─── Seal ─── */
+        .seal-container {
+            position: absolute;
+            right: 32mm;
+            bottom: 72mm;
+        }
+
+        .seal {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid #D4AF37;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);
+            position: relative;
+        }
+
+        .seal::before {
+            content: '';
+            position: absolute;
+            top: 4px; left: 4px; right: 4px; bottom: 4px;
+            border-radius: 50%;
+            border: 0.5px solid rgba(212,175,55,0.3);
+        }
+
+        .seal .seal-icon {
+            font-size: 18px;
+            margin-bottom: 2px;
+        }
+
+        .seal .seal-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 7px;
+            font-weight: 700;
+            color: #D4AF37;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            line-height: 1.3;
+        }
+
+        /* ─── Validation bar ─── */
+        .validation-bar {
+            text-align: center;
+            margin-top: auto;
+            padding-top: 4mm;
+            font-size: 8px;
+            color: #B0B8C4;
+            letter-spacing: 0.08em;
+        }
+
+        .validation-bar .ecosystem {
+            font-size: 8.5px;
+            color: #9CA3AF;
+            margin-bottom: 4mm;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        /* ─── Signatures ─── */
+        .signatures {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 5mm;
+            width: 100%;
+            max-width: 420px;
+        }
+
+        .signature {
+            text-align: center;
+            flex: 1;
+            max-width: 180px;
+        }
+
+        .signature .sig-line {
+            width: 100%;
+            height: 0.5px;
+            background: #1B3B5F;
+            margin-bottom: 6px;
+            opacity: 0.3;
+        }
+
+        .signature .sig-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 11px;
+            font-weight: 600;
+            color: #1B3B5F;
+        }
+
+        .signature .sig-title {
+            font-size: 8px;
+            color: #9CA3AF;
+            margin-top: 2px;
+            letter-spacing: 0.05em;
+        }
+
+        /* ─── Meta info ─── */
+        .meta-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 5mm;
+        }
+
+        .meta-item {
+            text-align: center;
+        }
+
+        .meta-item .meta-label {
+            font-size: 7px;
+            color: #B0B8C4;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 2px;
+        }
+
+        .meta-item .meta-value {
+            font-size: 9px;
+            color: #6B7280;
+            font-weight: 500;
+        }
+
+        /* ─── Compass watermark ─── */
+        .watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 260px;
+            height: 260px;
+            opacity: 0.018;
+            pointer-events: none;
+        }
+
+        .watermark svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* ─── Print ─── */
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .certificate {
+                box-shadow: none;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate">
+
+        <!-- Background watermark compass -->
+        <div class="watermark">
+            <svg viewBox="0 0 200 200" fill="#1B3B5F">
+                <circle cx="100" cy="100" r="95" fill="none" stroke="#1B3B5F" stroke-width="0.5"/>
+                <circle cx="100" cy="100" r="80" fill="none" stroke="#1B3B5F" stroke-width="0.3"/>
+                <line x1="100" y1="5" x2="100" y2="195" stroke="#1B3B5F" stroke-width="0.3"/>
+                <line x1="5" y1="100" x2="195" y2="100" stroke="#1B3B5F" stroke-width="0.3"/>
+                <line x1="30" y1="30" x2="170" y2="170" stroke="#1B3B5F" stroke-width="0.2"/>
+                <line x1="170" y1="30" x2="30" y2="170" stroke="#1B3B5F" stroke-width="0.2"/>
+                <polygon points="100,8 104,25 96,25" fill="#1B3B5F"/>
+                <polygon points="100,192 104,175 96,175" fill="#1B3B5F"/>
+                <polygon points="8,100 25,96 25,104" fill="#1B3B5F"/>
+                <polygon points="192,100 175,96 175,104" fill="#1B3B5F"/>
+            </svg>
+        </div>
+
+        <!-- Gold border frame -->
+        <div class="border-frame"></div>
+
+        <!-- Corner ornaments -->
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
+
+        <!-- Seal -->
+        <div class="seal-container">
+            <div class="seal">
+                <div class="seal-icon">✦</div>
+                <div class="seal-text">Herdeiro<br>Alinhado</div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+
+            <!-- Instituto -->
+            <div class="instituto">
+                <div class="instituto-name">Instituto Marcos Barreto</div>
+                <div class="instituto-line"></div>
+            </div>
+
+            <!-- Title -->
+            <div class="title-block">
+                <div class="title-label">✦ Certificação Oficial ✦</div>
+                <div class="title-main">Certificado de Alinhamento<br>do Herdeiro</div>
+                <div class="title-sub">Reconhecimento de Jornada e Realinhamento Espiritual e Prático</div>
+            </div>
+
+            <!-- Divider -->
+            <div class="gold-divider">
+                <div class="line"></div>
+                <div class="diamond"></div>
+                <div class="line"></div>
+            </div>
+
+            <!-- Certifica -->
+            <div class="certifica-intro">Este documento certifica que</div>
+
+            <!-- Name -->
+            <div class="student-name">Nome do Aluno</div>
+
+            <!-- Body -->
+            <div class="body-text">
+                concluiu integralmente a jornada formativa composta por:
+            </div>
+
+            <!-- Modules -->
+            <div class="modules">
+                <div class="module-item">
+                    <div class="module-bullet"></div>
+                    <span>DNA do Herdeiro — Diagnóstico do Perfil Espiritual</span>
+                </div>
+                <div class="module-item">
+                    <div class="module-bullet"></div>
+                    <span>A Revelação do Herdeiro — Estudo de Gálatas 3 e 4</span>
+                </div>
+                <div class="module-item">
+                    <div class="module-bullet"></div>
+                    <span>Sistema Guiado de Realinhamento Espiritual e Prático — Eixos 0 a 5</span>
+                </div>
+            </div>
+
+            <div class="body-text" style="margin-top:3mm;">
+                e demonstrou compromisso com o processo de <strong>alinhamento, clareza e posicionamento</strong> como herdeiro.
+            </div>
+
+            <!-- Declaration -->
+            <div class="declaration">
+                <div class="gold-divider" style="max-width:200px;margin:0 auto 4mm;">
+                    <div class="line"></div>
+                    <div class="diamond"></div>
+                    <div class="line"></div>
+                </div>
+                <p>
+                    "Este não é um certificado de conclusão.<br>
+                    É o reconhecimento de que você deixou de andar no escuro<br>
+                    e passou a caminhar com direção."
+                </p>
+            </div>
+
+            <!-- Validation -->
+            <div class="validation-bar">
+                <div class="ecosystem">Jornada validada dentro do Ecossistema Mapa do Herdeiro</div>
+            </div>
+
+            <!-- Signatures -->
+            <div class="signatures">
+                <div class="signature">
+                    <div class="sig-line"></div>
+                    <div class="sig-name">Rabino Marcos Barreto</div>
+                    <div class="sig-title">Fundador — Ecossistema Mapa do Herdeiro</div>
+                </div>
+                <div class="signature">
+                    <div class="sig-line"></div>
+                    <div class="sig-name">Cláudia Barreto</div>
+                    <div class="sig-title">Diretora Estratégica — Instituto Marcos Barreto</div>
+                </div>
+            </div>
+
+            <!-- Meta -->
+            <div class="meta-row">
+                <div class="meta-item">
+                    <div class="meta-label">Data de Emissão</div>
+                    <div class="meta-value">___  / ___  / 2026</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Código de Validação</div>
+                    <div class="meta-value">MH-2026-________</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

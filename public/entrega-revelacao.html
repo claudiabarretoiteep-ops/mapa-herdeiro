@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Revelação Começa Agora — A Revelação do Herdeiro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F5F1E8;
+            color: #6B7280;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        /* ─── Header ─── */
+        .header {
+            background: linear-gradient(135deg, #1B3B5F 0%, #122842 100%);
+            padding: 48px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(212,175,55,0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 20%, rgba(212,175,55,0.05) 0%, transparent 40%);
+        }
+
+        .header * { position: relative; z-index: 1; }
+
+        .header-badge {
+            display: inline-block;
+            background: rgba(212,175,55,0.1);
+            border: 1px solid rgba(212,175,55,0.2);
+            border-radius: 50px;
+            padding: 6px 18px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #D4AF37;
+            margin-bottom: 24px;
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #FFFFFF;
+            line-height: 1.2;
+            margin-bottom: 8px;
+        }
+
+        .header h1 span { color: #D4AF37; }
+
+        .header p {
+            color: rgba(255,255,255,0.5);
+            font-size: 13px;
+            margin-top: 12px;
+        }
+
+        /* ─── Body ─── */
+        .body {
+            background: #FFFFFF;
+            padding: 40px;
+        }
+
+        /* ─── Welcome ─── */
+        .welcome {
+            text-align: center;
+            margin-bottom: 36px;
+            padding-bottom: 36px;
+            border-bottom: 1px solid #F0EDE5;
+        }
+
+        .welcome h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #1B3B5F;
+            margin-bottom: 12px;
+        }
+
+        .welcome p {
+            font-size: 14px;
+            color: #6B7280;
+            max-width: 460px;
+            margin: 0 auto;
+        }
+
+        .highlight { color: #1B3B5F; font-weight: 600; }
+
+        /* ─── Main CTA ─── */
+        .main-cta {
+            text-align: center;
+            margin: 36px 0;
+        }
+
+        .main-cta a {
+            display: inline-block;
+            background: linear-gradient(135deg, #D4AF37, #C49B2F);
+            color: #1B3B5F;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 18px 48px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: all 0.2s;
+            box-shadow: 0 4px 16px rgba(212,175,55,0.3);
+        }
+
+        .main-cta a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(212,175,55,0.4);
+        }
+
+        .main-cta .sub {
+            font-size: 12px;
+            color: #9CA3AF;
+            margin-top: 12px;
+        }
+
+        /* ─── Info Card ─── */
+        .info-card {
+            background: #FDFCF7;
+            border: 1px solid #F0EDE5;
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-bottom: 28px;
+        }
+
+        .info-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #1B3B5F;
+            margin-bottom: 16px;
+        }
+
+        .info-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-card ul li {
+            font-size: 13px;
+            color: #6B7280;
+            padding: 8px 0;
+            border-bottom: 1px solid #F0EDE5;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .info-card ul li:last-child { border-bottom: none; }
+
+        .info-card ul li .check {
+            color: #D4AF37;
+            font-size: 16px;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* ─── Aula Details ─── */
+        .aula-details {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin: 24px 0;
+            padding: 20px;
+            background: #FDFCF7;
+            border: 1px solid #F0EDE5;
+            border-radius: 12px;
+        }
+
+        .detail-item {
+            text-align: center;
+        }
+
+        .detail-item .icon {
+            font-size: 24px;
+            margin-bottom: 6px;
+        }
+
+        .detail-item strong {
+            display: block;
+            font-size: 12px;
+            color: #1B3B5F;
+            font-weight: 700;
+        }
+
+        .detail-item span {
+            font-size: 11px;
+            color: #9CA3AF;
+        }
+
+        /* ─── Bonus Section ─── */
+        .bonus {
+            margin: 32px 0;
+            padding: 24px;
+            background: linear-gradient(135deg, rgba(212,175,55,0.05), rgba(212,175,55,0.02));
+            border: 1px solid rgba(212,175,55,0.15);
+            border-radius: 12px;
+        }
+
+        .bonus h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #1B3B5F;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .bonus-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(212,175,55,0.1);
+        }
+
+        .bonus-item:last-child { border-bottom: none; }
+
+        .bonus-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .bonus-text strong {
+            display: block;
+            font-size: 13px;
+            color: #1B3B5F;
+            font-weight: 600;
+        }
+
+        .bonus-text span {
+            font-size: 11px;
+            color: #9CA3AF;
+        }
+
+        .bonus-text a {
+            color: #D4AF37;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* ─── Divider ─── */
+        .divider {
+            height: 1px;
+            background: #F0EDE5;
+            margin: 36px 0;
+        }
+
+        /* ─── Support ─── */
+        .support {
+            text-align: center;
+            padding: 24px;
+            background: #FDFCF7;
+            border: 1px solid #F0EDE5;
+            border-radius: 12px;
+            margin-top: 32px;
+        }
+
+        .support h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 15px;
+            font-weight: 700;
+            color: #1B3B5F;
+            margin-bottom: 8px;
+        }
+
+        .support p {
+            font-size: 12px;
+            color: #9CA3AF;
+            line-height: 1.6;
+        }
+
+        .support a {
+            color: #D4AF37;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* ─── Quote ─── */
+        .quote {
+            text-align: center;
+            margin: 36px 0;
+            padding: 24px 32px;
+            border-left: 3px solid #D4AF37;
+            background: rgba(212,175,55,0.03);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .quote p {
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            font-style: italic;
+            color: #1B3B5F;
+            line-height: 1.5;
+        }
+
+        .quote .author {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-style: normal;
+            color: #9CA3AF;
+            margin-top: 8px;
+        }
+
+        /* ─── Ecosystem ─── */
+        .ecosystem {
+            background: #1B3B5F;
+            padding: 40px 32px;
+            text-align: center;
+        }
+
+        .ecosystem h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #D4AF37;
+            margin-bottom: 6px;
+        }
+
+        .ecosystem .subtitle {
+            font-size: 12px;
+            color: rgba(255,255,255,0.45);
+            margin-bottom: 24px;
+        }
+
+        .eco-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 400px;
+            margin: 0 auto 28px;
+        }
+
+        .eco-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 10px;
+            padding: 12px 16px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .eco-link:hover {
+            background: rgba(212,175,55,0.1);
+            border-color: rgba(212,175,55,0.2);
+            transform: translateY(-1px);
+        }
+
+        .eco-link .eco-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .eco-link .eco-text {
+            text-align: left;
+        }
+
+        .eco-link .eco-text strong {
+            display: block;
+            font-size: 13px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .eco-link .eco-text span {
+            font-size: 11px;
+            color: rgba(255,255,255,0.4);
+        }
+
+        .eco-social {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .eco-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.2s;
+        }
+
+        .eco-social a:hover { transform: translateY(-2px); }
+        .eco-social .ig:hover { background: #E1306C; }
+        .eco-social .yt:hover { background: #FF0000; }
+        .eco-social .wp:hover { background: #25D366; }
+
+        /* ─── Footer ─── */
+        .footer {
+            background: #122842;
+            padding: 24px 40px;
+            text-align: center;
+        }
+
+        .footer p {
+            color: rgba(255,255,255,0.2);
+            font-size: 11px;
+        }
+
+        .footer .brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 14px;
+            color: rgba(255,255,255,0.3);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        /* ─── Responsive ─── */
+        @media (max-width: 640px) {
+            .header { padding: 36px 24px; }
+            .header h1 { font-size: 24px; }
+            .body { padding: 28px 20px; }
+            .aula-details { gap: 16px; padding: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- ═══ HEADER ═══ -->
+        <div class="header">
+            <div class="header-badge">✦ Acesso Liberado</div>
+            <h1>A Revelação<br><span>do Herdeiro</span></h1>
+            <p>Aula completa com Rabino Marcos Barreto — Gálatas 3 e 4 | 1h45 de imersão</p>
+        </div>
+
+        <!-- ═══ BODY ═══ -->
+        <div class="body">
+
+            <!-- Welcome -->
+            <div class="welcome">
+                <h2>Sua revelação começa agora.</h2>
+                <p>
+                    Parabéns por tomar essa decisão. Você acaba de acessar a aula que muda a forma como você entende
+                    <span class="highlight">herança, identidade e propósito</span> na Escritura.
+                </p>
+            </div>
+
+            <!-- Aula Details -->
+            <div class="aula-details">
+                <div class="detail-item">
+                    <div class="icon">🎬</div>
+                    <strong>1h45 de Aula</strong>
+                    <span>Imersão completa</span>
+                </div>
+                <div class="detail-item">
+                    <div class="icon">📖</div>
+                    <strong>Gálatas 3 e 4</strong>
+                    <span>Estudo verso a verso</span>
+                </div>
+                <div class="detail-item">
+                    <div class="icon">🔓</div>
+                    <strong>Acesso Vitalício</strong>
+                    <span>Assista quantas vezes quiser</span>
+                </div>
+                <div class="detail-item">
+                    <div class="icon">🎓</div>
+                    <strong>Rabino Marcos Barreto</strong>
+                    <span>Teólogo e hebraísta</span>
+                </div>
+            </div>
+
+            <!-- Main CTA -->
+            <div class="main-cta">
+                <a href="https://youtu.be/1iscGVP472c" target="_blank">
+                    ▶ ASSISTIR A AULA AGORA
+                </a>
+                <p class="sub">Clique para ser redirecionado ao vídeo completo</p>
+            </div>
+
+            <!-- O que você vai descobrir -->
+            <div class="info-card">
+                <h3>O que você vai descobrir nessa aula</h3>
+                <ul>
+                    <li><span class="check">✦</span> A diferença entre ser <strong>servo</strong> e ser <strong>herdeiro</strong> — e por que isso muda tudo</li>
+                    <li><span class="check">✦</span> O que Paulo realmente quis dizer em Gálatas 4 sobre <strong>tutores e curadores</strong></li>
+                    <li><span class="check">✦</span> Por que muitos vivem como escravos mesmo tendo <strong>direito à herança</strong></li>
+                    <li><span class="check">✦</span> O conceito hebraico de <strong>Nachalá</strong> (herança) que a igreja deixou de ensinar</li>
+                    <li><span class="check">✦</span> Como sair da <strong>menoridade espiritual</strong> e entrar em governo</li>
+                    <li><span class="check">✦</span> A revelação que conecta <strong>identidade, propósito e prosperidade</strong> no plano original</li>
+                </ul>
+            </div>
+
+            <!-- Bônus -->
+            <div class="bonus">
+                <h3>🎁 Seus Bônus Incluídos</h3>
+
+                <div class="bonus-item">
+                    <div class="bonus-icon" style="background: rgba(139,92,246,0.12); color: #8B5CF6;">🧬</div>
+                    <div class="bonus-text">
+                        <strong>DNA do Herdeiro — Diagnóstico Gratuito</strong>
+                        <span>Descubra seu perfil espiritual com o diagnóstico exclusivo.</span><br>
+                        <a href="https://mapadoherdeiro.com.br/eixos/#/diagnostico" target="_blank">Acessar Diagnóstico →</a>
+                    </div>
+                </div>
+
+                <div class="bonus-item">
+                    <div class="bonus-icon" style="background: rgba(212,175,55,0.12); color: #D4AF37;">📚</div>
+                    <div class="bonus-text">
+                        <strong>Eixo 0 — Despertar (E-book Gratuito)</strong>
+                        <span>O primeiro eixo do Sistema de Realinhamento, de graça para você.</span><br>
+                        <a href="https://mapadoherdeiro.com.br/eixos/" target="_blank">Receber o Eixo 0 →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote -->
+            <div class="quote">
+                <p>"Você não é escravo tentando agradar um senhor. Você é filho aprendendo a governar a herança do Pai."</p>
+                <div class="author">— Rabino Marcos Barreto, na aula "A Revelação do Herdeiro"</div>
+            </div>
+
+            <!-- Instructions -->
+            <div class="info-card">
+                <h3>📋 Instruções de Acesso</h3>
+                <ul>
+                    <li><span class="check">1.</span> <strong>Clique no botão</strong> "Assistir a Aula Agora" acima.</li>
+                    <li><span class="check">2.</span> Você será direcionado ao <strong>vídeo completo</strong> (1h45).</li>
+                    <li><span class="check">3.</span> <strong>Salve este e-mail</strong> — seu acesso é vitalício. Volte quando quiser.</li>
+                    <li><span class="check">4.</span> Após assistir, faça o <strong>DNA do Herdeiro</strong> para descobrir seu perfil.</li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div class="support">
+                <h3>Precisa de ajuda?</h3>
+                <p>
+                    Entre em contato pelo e-mail
+                    <a href="mailto:claudiabarreto.iteep@gmail.com">claudiabarreto.iteep@gmail.com</a>
+                    ou pelo WhatsApp.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- ═══ ECOSSISTEMA ═══ -->
+        <div class="ecosystem">
+            <h3>Conheça o Ecossistema</h3>
+            <div class="subtitle">Mapa do Herdeiro — Rabino Marcos Barreto</div>
+
+            <div class="eco-links">
+                <a href="https://chat.whatsapp.com/GklHlN6ObdAJcOEwauT0dB" class="eco-link" target="_blank">
+                    <div class="eco-icon" style="background: rgba(37,211,102,0.15); color: #25D366;">💬</div>
+                    <div class="eco-text">
+                        <strong>Sala do Mapa — Grupo WhatsApp</strong>
+                        <span>Entre na comunidade gratuita de realinhamento</span>
+                    </div>
+                </a>
+
+                <a href="https://mapadoherdeiro.com.br/eixos/#/diagnostico" class="eco-link" target="_blank">
+                    <div class="eco-icon" style="background: rgba(139,92,246,0.15); color: #8B5CF6;">🧬</div>
+                    <div class="eco-text">
+                        <strong>DNA do Herdeiro</strong>
+                        <span>Diagnóstico gratuito do seu perfil espiritual</span>
+                    </div>
+                </a>
+
+                <a href="https://mapadoherdeiro.com.br/eixos/#/sistema" class="eco-link" target="_blank">
+                    <div class="eco-icon" style="background: rgba(16,185,129,0.15); color: #10B981;">📚</div>
+                    <div class="eco-text">
+                        <strong>Coleção Eixos do Herdeiro</strong>
+                        <span>Os 6 eixos de realinhamento completos</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Social -->
+            <div class="eco-social">
+                <a href="https://www.instagram.com/rabinomarcosbarreto.oficial/" target="_blank" rel="noopener noreferrer" class="ig" title="Instagram">📸</a>
+                <a href="https://www.youtube.com/prmarcosbarreto" target="_blank" rel="noopener noreferrer" class="yt" title="YouTube">🎬</a>
+                <a href="https://api.whatsapp.com/send?phone=5537991494464&text=Ol%C3%A1%20Pra.%20Cl%C3%A1udia!%20Vim%20pelo%20Mapa%20do%20Herdeiro." target="_blank" rel="noopener noreferrer" class="wp" title="WhatsApp">💬</a>
+            </div>
+        </div>
+
+        <!-- ═══ FOOTER ═══ -->
+        <div class="footer">
+            <div class="brand">Mapa do Herdeiro</div>
+            <p>Rabino Marcos Barreto — Todos os direitos reservados</p>
+            <p style="margin-top: 8px;">Você recebeu este acesso porque adquiriu "A Revelação do Herdeiro".</p>
+        </div>
+
+    </div>
+</body>
+</html>

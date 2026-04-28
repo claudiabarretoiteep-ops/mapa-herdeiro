@@ -1,11 +1,9 @@
 import React from 'react';
+import rabinoPhoto from '../assets/rabino_marcos_barreto-CUeki_T2.webp';
 
 const About = () => {
     return (
-        <section className="py-20 bg-primary text-white relative overflow-hidden">
-            {/* Decorative texture */}
-            <div className="absolute inset-0 opacity-5 bg-[url('/paper-texture.png')] mix-blend-overlay"></div>
-
+        <section id="sobre" className="py-20 bg-primary text-white relative overflow-hidden">
             <div className="container mx-auto px-4 relative z-10">
                 <div className="flex flex-col md:flex-row gap-12 items-center">
 
@@ -14,19 +12,19 @@ const About = () => {
                         <div className="aspect-[3/4] bg-neutral-800 rounded-lg overflow-hidden border-4 border-secondary/50 shadow-2xl relative">
                             {/* Image Real */}
                             <img
-                                src="/rabino_v2.png"
-                                alt="Rabino Marcos Barreto"
+                                src={rabinoPhoto}
+                                alt="Foto do Rabino Marcos Barreto"
+                                width="320"
+                                height="320"
+                                loading="lazy"
+                                decoding="async"
                                 className="w-full h-full object-cover"
-                                onError={(e) => {
-                                    e.target.onerror = null;
-                                    e.target.parentElement.innerHTML = '<div class="w-full h-full flex items-center justify-center bg-neutral-900 text-white/50 font-serif italic p-4 text-center">Salve a foto como "public/rabino_v2.png"</div>';
-                                }}
                             />
 
                             {/* Name Tag */}
                             <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/90 to-transparent p-6">
                                 <p className="font-serif text-xl text-white">Rabino Marcos Barreto</p>
-                                <p className="text-xs text-secondary tracking-widest uppercase">Rabino e Mentor Espiritual</p>
+                                <p className="text-xs text-secondary tracking-widest uppercase">Mentor Espiritual</p>
                             </div>
                         </div>
                     </div>
