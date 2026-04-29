@@ -1,4 +1,6 @@
 const { chromium } = require('playwright');
+const fs = require('fs');
+const path = require('path');
 
 (async () => {
   const browser = await chromium.launch();
@@ -100,7 +102,6 @@ const { chromium } = require('playwright');
             margin-bottom: 16px;
         }
 
-        /* ESPACO VAZIO para Voomp inserir o nome do aluno */
         .name-space {
             width: 500px; height: 70px;
             border-bottom: 2px solid #D4AF37;
@@ -164,6 +165,11 @@ const { chromium } = require('playwright');
             gap: 80px; margin-top: 16px; width: 100%;
         }
         .signature { text-align: center; flex: 0 0 220px; }
+        .rubrica {
+            height: 60px; margin-bottom: 6px;
+            display: flex; align-items: flex-end; justify-content: center;
+        }
+        .rubrica svg { height: 50px; width: auto; }
         .sig-line { width: 100%; height: 0.5px; background: #1B3B5F; margin-bottom: 8px; opacity: 0.3; }
         .sig-name {
             font-family: 'Playfair Display', serif;
@@ -259,11 +265,30 @@ const { chromium } = require('playwright');
 
         <div class="signatures">
             <div class="signature">
+                <div class="rubrica">
+                    <svg viewBox="0 0 360 120" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 40 90 Q 45 30, 70 35 Q 85 37, 80 65 Q 78 80, 95 40 Q 105 20, 115 55 Q 120 70, 130 45 Q 140 25, 160 50 C 175 70, 185 35, 200 50 Q 220 65, 250 45 C 270 30, 290 55, 310 40" fill="none" stroke="#1B3B5F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M 55 78 Q 180 72, 300 75" fill="none" stroke="#1B3B5F" stroke-width="0.8" stroke-linecap="round" opacity="0.4"/>
+                        <circle cx="145" cy="25" r="2.5" fill="#D4AF37"/>
+                        <path d="M 305 42 Q 320 35, 330 45 Q 340 55, 325 58" fill="none" stroke="#1B3B5F" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M 60 95 Q 180 100, 300 92" fill="none" stroke="#D4AF37" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+                    </svg>
+                </div>
                 <div class="sig-line"></div>
                 <div class="sig-name">Rabino Marcos Barreto</div>
                 <div class="sig-title">Fundador — Ecossistema Mapa do Herdeiro</div>
             </div>
             <div class="signature">
+                <div class="rubrica">
+                    <svg viewBox="0 0 360 120" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 60 55 Q 45 25, 70 20 Q 95 15, 90 45 Q 88 60, 105 35 Q 115 22, 130 45 C 140 60, 148 30, 165 40 Q 180 48, 195 35 C 210 22, 225 50, 245 38 Q 260 28, 280 45 Q 295 58, 310 42" fill="none" stroke="#1B3B5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M 55 58 Q 40 70, 50 80 Q 60 88, 80 78" fill="none" stroke="#1B3B5F" stroke-width="1.8" stroke-linecap="round"/>
+                        <path d="M 70 72 Q 190 68, 305 70" fill="none" stroke="#1B3B5F" stroke-width="0.6" stroke-linecap="round" opacity="0.3"/>
+                        <circle cx="175" cy="22" r="2" fill="#D4AF37"/>
+                        <path d="M 306 44 Q 320 30, 335 40 Q 342 48, 330 52 Q 322 54, 325 48" fill="none" stroke="#1B3B5F" stroke-width="1.3" stroke-linecap="round"/>
+                        <path d="M 50 95 Q 180 102, 310 93" fill="none" stroke="#D4AF37" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+                    </svg>
+                </div>
                 <div class="sig-line"></div>
                 <div class="sig-name">Cláudia Barreto</div>
                 <div class="sig-title">Diretora Estratégica — Instituto Marcos Barreto</div>
@@ -280,14 +305,12 @@ const { chromium } = require('playwright');
 
   await page.setContent(html, { waitUntil: 'networkidle' });
 
-  // PNG for Voomp (high quality)
   await page.screenshot({
     path: 'certificado-voomp-base.png',
     fullPage: false,
     type: 'png'
   });
 
-  // JPEG (lighter file)
   await page.screenshot({
     path: 'certificado-voomp-base.jpg',
     fullPage: false,
@@ -296,5 +319,5 @@ const { chromium } = require('playwright');
   });
 
   await browser.close();
-  console.log('Imagens geradas com sucesso!');
+  console.log('Certificado com rubricas gerado!');
 })();
