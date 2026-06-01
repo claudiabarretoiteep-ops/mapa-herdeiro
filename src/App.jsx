@@ -140,6 +140,9 @@ function App() {
                 return <Reader onNavigate={navigate} />;
             case '#/termos':
                 return <TermsOfUse />;
+            case '#/privacidade':
+            case '#/privacy':
+                return <PrivacyPolicy />;
             default:
                 // Suporte para rotas dinâmicas como #/eixo/slug
                 const eixoMatch = currentPath.match(/#\/eixo\/([^/?]+)/);
