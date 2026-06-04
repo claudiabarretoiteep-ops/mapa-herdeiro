@@ -7,6 +7,7 @@ const ThankYou = lazy(() => import('./pages/ThankYou'));
 const AdminLogin = lazy(() => import('./pages/Admin/Login'));
 const AdminDashboard = lazy(() => import('./pages/Admin/Dashboard'));
 const AdminEixos = lazy(() => import('./pages/Admin/AdminEixos'));
+const PresencasAdmin = lazy(() => import('./pages/Admin/PresencasAdmin'));
 const Qualificacao = lazy(() => import('./pages/Qualificacao'));
 const ComingSoon = lazy(() => import('./pages/ComingSoon'));
 const TermsOfUse = lazy(() => import('./pages/TermsOfUse'));
@@ -128,6 +129,8 @@ function App() {
                 return session ? <AdminDashboard onNavigate={navigate} /> : <AdminLogin onNavigate={navigate} />;
             case '#/admin/eixos':
                 return session ? <AdminEixos onNavigate={navigate} /> : <AdminLogin onNavigate={navigate} />;
+            case '#/admin/presencas':
+                return session ? <PresencasAdmin onNavigate={navigate} /> : <AdminLogin onNavigate={navigate} />;
             case '#/revelacao':
             case '#/revelacao-do-herdeiro':
                 return <RevelacaoSales onNavigate={navigate} />;
