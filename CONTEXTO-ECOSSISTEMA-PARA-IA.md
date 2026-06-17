@@ -165,7 +165,7 @@ Não usamos **n8n** — a orquestração é via funções Supabase + o `dispatch
 | **Google Drive** | Documentos-fonte: livro "O Herdeiro e o Escravo", Pesquisas de Mercado Tikkun, "Espelho Tikkun — 4 Perfis e Cartas", "Cartas Raízes da Identidade", VSL do DNA, vídeos de Shiur, Playbooks | ✅ Rico, mas solto |
 | **Google Calendar** | Agendas: Edição de Vídeos, Pagamentos mensais, Tarefas Escola e Igreja, Masterclasses | ✅ Operacional |
 | **Google Sheets** | Recebe cópia dos leads via webhook | ✅ |
-| **HubSpot** | CRM (conectado) | ⚠️ Conectado, uso a confirmar |
+| **HubSpot** | — | ⛔ Conectado mas **NÃO usado** (descartar) |
 | **Gmail** | E-mail | ✅ Conectado |
 | **Airtable** | Só uma base pessoal "Meu GTD" | ⚪ Pouco usado |
 | **Cloudflare** | Sem Workers, sem D1, R2 desabilitado | ⚪ Praticamente não usado |
