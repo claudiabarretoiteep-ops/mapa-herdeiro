@@ -103,44 +103,23 @@ const Reader = ({ onNavigate }) => {
         const eixoId = params.get('eixo') || '0';
 
         try {
-            // Eixo 0 é gratuito — basta ser lead cadastrado
-            if (eixoId === '0') {
-                const { data, error } = await supabase
-                    .from('leads')
-                    .select('email')
-                    .eq('email', cleanEmail)
-                    .single();
+            // Verifica acesso via função controlada (não expõe a lista de e-mails).
+            // Eixo 0 = gratuito (checa lead cadastrado); Eixos 1-5 = pagos (checa compra).
+            const eixoSlug = eixoId === '0' ? 'eixo-0' : `eixo-${eixoId}`;
+            const { data: temAcesso, error } = await supabase
+                .rpc('verificar_acesso_ebook', { p_email: cleanEmail, p_ebook: eixoSlug });
 
-                if (error || !data) {
-                    setAccessError('E-mail não encontrado. Por favor, cadastre-se primeiro para liberar o acesso.');
-                    setHasAccess(false);
-                } else {
-                    onAccessGranted(cleanEmail);
-                }
+            if (error) {
+                setAccessError('Erro técnico ao verificar acesso. Tente novamente.');
+                setHasAccess(false);
+            } else if (temAcesso) {
+                onAccessGranted(cleanEmail);
+            } else if (eixoId === '0') {
+                setAccessError('E-mail não encontrado. Por favor, cadastre-se primeiro para liberar o acesso.');
+                setHasAccess(false);
             } else {
-                // Eixos 1-5 são pagos — verificar compra na tabela leads_access
-                const { data, error } = await supabase
-                    .from('leads_access')
-                    .select('allowed_ebooks')
-                    .eq('email', cleanEmail)
-                    .single();
-
-                if (error || !data) {
-                    setAccessError('Acesso não liberado. Este eixo requer compra. Adquira o seu na página do eixo.');
-                    setHasAccess(false);
-                } else {
-                    // Verificar se o eixo específico está na lista de ebooks permitidos
-                    const allowedEbooks = data.allowed_ebooks || [];
-                    const eixoSlug = `eixo-${eixoId}`;
-                    const hasEixoAccess = allowedEbooks.includes(eixoSlug) || allowedEbooks.includes('all');
-
-                    if (hasEixoAccess) {
-                        onAccessGranted(cleanEmail);
-                    } else {
-                        setAccessError('Você ainda não adquiriu este eixo. Acesse a página de compra para liberar.');
-                        setHasAccess(false);
-                    }
-                }
+                setAccessError('Acesso não liberado. Este eixo requer compra. Adquira o seu na página do eixo.');
+                setHasAccess(false);
             }
         } catch (err) {
             setAccessError('Erro técnico ao verificar acesso. Tente novamente.');
