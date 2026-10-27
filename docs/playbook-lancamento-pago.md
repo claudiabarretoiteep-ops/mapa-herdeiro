@@ -476,8 +476,8 @@ Primeiro, o que já temos "dentro da nossa inteligência e do nosso negócio" (o
 ## PARTE 11 — Pontos ambíguos da transcrição (conferir na gravação)
 
 A transcrição é automática e tem trechos trocados. Estes pontos merecem ser ouvidos de novo antes de decidir:
-1. **Preços:** 8.197 × 8.997 (normal) e 5.997 × 4.997 (fundador).
-2. **"Mapa da Montanha"**, **"chamarra"** e **"Tzedaká / reconhecimento acreditado"** (nomes dos bônus de fundador).
+1. ~~Preços~~ → conferido na página: normal **R$ 8.997**, fundador **R$ 4.997**. O 5.997 ouvido provavelmente é o total do parcelamento (12 × 499,70 = 5.996,40); ver `docs/auditoria-lp-mapa-da-redencao.md`.
+2. ~~"Mapa da Montanha"~~ → conferido na página: é o **"Acesso vitalício ao Mapa da Redenção"**. Os bônus de fundador na página são: selo de Fundador no certificado, preço congelado e voz na construção.
 3. **"Quem diz garantia, risca…"** (trecho da garantia): confirmar se a garantia fica como está.
 4. **"Você trata as 12 áreas dentro do workshop"**: a leitura mais provável é que o workshop trabalha **uma** área e cita as outras 11.
 5. **Extensões de Chrome** que Cláudio preferiu não indicar.
