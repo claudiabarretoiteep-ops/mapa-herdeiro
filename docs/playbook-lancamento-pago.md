@@ -4,6 +4,8 @@
 > Use como checklist antes de publicar qualquer landing page, workshop, criativo ou campanha.
 > Origem: revisão ao vivo da landing page da Mentoria **Mapa da Redenção — Turma Fundadora com Rabino Marcos Barreto**.
 >
+> **Quem é quem:** Cláudio = instrutor da aula · Cláudia = você (aluna) · André = outro aluno · Tata = referência de outro negócio.
+>
 > Legenda: ✅ manter · ✏️ alterar · ➕ acrescentar · ❌ remover · ⚠️ conferir/decidir
 > Os trechos entre aspas são o texto da página **como foi lido na aula** (a transcrição tem falhas; conferir com a página real).
 
@@ -15,7 +17,7 @@
 - **Quem compra na hora não passa por ela.** No fim do pitch do workshop, abre-se **o link do checkout**, não a página.
 - **Quem passa pela página:** quem viu o workshop e ficou **em dúvida**. A equipe também envia a página para quem pedir mais informações depois do workshop.
 - Consequência: a página precisa **tirar dúvidas e mostrar com clareza o que a pessoa recebe**. Não precisa reconvencer da dor, porque isso já foi feito no workshop.
-- Tudo que vem **antes** de "Tudo que você recebe" já foi ouvido no workshop. A professora não entrou nesses blocos porque estão **congruentes com o workshop**.
+- Tudo que vem **antes** de "Tudo que você recebe" já foi ouvido no workshop. Cláudio não entrou nesses blocos porque estão **congruentes com o workshop**.
 - O carrinho fica aberto **alguns dias** depois do workshop (1–2 dias ou mais). Isso influencia o que pode ou não ficar escrito na página (ver 1.8).
 
 ---
@@ -68,17 +70,17 @@
 ### 1.6 Aceleradores — "atalhos para o resultado"
 | | Item | Decisão |
 |---|---|---|
-| ✏️ | **Moré, o seu mestre de estudos**: "uma inteligência treinada no jeito do Rabino de pensar a Palavra… a qualquer hora… Moré quer dizer mestre" | A professora entendeu, mas **"a maioria não vai entender"**. Escrever com todas as letras: **"uma Inteligência Artificial (um 'cérebro' de IA) treinada com o conhecimento do Rabino e com o jeito dele de pensar a Palavra"**. Usar a linguagem do leigo, sem jargão ("agente", "chat", "Claude"). |
+| ✏️ | **Moré, o seu mestre de estudos**: "uma inteligência treinada no jeito do Rabino de pensar a Palavra… a qualquer hora… Moré quer dizer mestre" | Cláudio entendeu, mas **"a maioria não vai entender"**. Escrever com todas as letras: **"uma Inteligência Artificial (um 'cérebro' de IA) treinada com o conhecimento do Rabino e com o jeito dele de pensar a Palavra"**. Usar a linguagem do leigo, sem jargão ("agente", "chat", "Claude"). |
 | ✅ | **Resumo em áudio de cada encontro**: "o essencial de cada aula para você revisar no carro, na caminhada, onde a vida deixar" | "Muito legal, pode deixar assim mesmo." |
 | ✏️ | **Resumo em vídeo de cada encontro**: "o coração de cada encontro condensado para relembrar rápido" | Escrever **"resumo em vídeo gravado (e editado) de cada encontro"**. "Parece besta, mas não é." Deixa claro que os encontros são gravados e que há uma versão editada para rever. ⚠️ Se a gravação completa também ficar disponível, dizer isso. |
 | ✏️ | **Plataforma própria**: "a sua área de membros, tudo em um lugar só: encontros, materiais e comunidade" | "Isso está com a nossa cara." Trocar "área de membros" por **"Área dos Mentorados"**. |
-| ✏️ | **Suporte VIP e imediato**: "você caminha acompanhado; quando surgir uma dúvida ou um aperto, não fica sem resposta" | **Como** vai ser esse suporte? Risco: a pessoa achar que fala **direto com o Rabino a qualquer hora** (ex.: "sábado, 3 da tarde, vou falar com o Rabino"). Escrever algo como **"a equipe está sempre pronta para te atender"** e **definir quem é "a equipe"** (IA + pessoas e, quando for o caso, o Rabino). Motivo: "a gente acha que não, mas tem mimimi depois". |
+| ✏️ | **Suporte VIP e imediato**: "você caminha acompanhado; quando surgir uma dúvida ou um aperto, não fica sem resposta" | **Como** vai ser esse suporte? Risco: a pessoa achar que fala **direto com o Rabino a qualquer hora** (ex.: "sábado, 3 da tarde, vou falar com o Rabino"). Escrever algo como **"a equipe está sempre pronta para te atender"** e **definir quem é "a equipe"**. Na aula, Cláudio resumiu assim: a equipe é **a IA e você (Cláudia), quando for preciso**, não o Rabino. Motivo: "a gente acha que não, mas tem mimimi depois". |
 | ✏️ | **Flashcards do Mapa da Redenção**: "os pontos-chave da jornada em cartões para fixar e revisar sem esforço" | "Flashcard" também é **linguagem nossa**. Trocar ou explicar (ex.: "cartões de revisão"). |
 
 ### 1.7 Materiais (Mapa mental · Biblioteca Hebraica · Guia das 7 Festas)
 | | Item | Decisão |
 |---|---|---|
-| ✅ | "O desenho inteiro da jornada numa página", "o material de apoio da raiz" e "o calendário" | A professora nem conhecia e achou muito bom. Manter. |
+| ✅ | "O desenho inteiro da jornada numa página", "o material de apoio da raiz" e "o calendário" | Cláudio nem conhecia e achou muito bom. Manter. |
 | ✅ | Guia das 7 Festas | Não é tratado no workshop e já está pronto. Pode ficar. |
 | ➕ | Visual | Mesmo ponto do 1.9: **mostrar** cada material em imagem/mockup, "mais claro ainda". |
 
@@ -102,7 +104,7 @@ Cada entregável de "Tudo que você recebe" precisa de imagem real ou mockup:
 - [ ] Flashcards e resumo em áudio: imagem ou mockup também.
 
 ### 1.10 Preço individual em cada item (ancoragem item por item)
-- ➕ Ao lado de **cada** entregável e de **cada** bônus: **quanto custaria separado**, com o valor **riscado**. Exemplo da professora (chute): "Moré: R$ 100/mês".
+- ➕ Ao lado de **cada** entregável e de **cada** bônus: **quanto custaria separado**, com o valor **riscado**. Exemplo de Cláudio (um chute dele): "Moré: R$ 100/mês".
 - Motivo: hoje o valor aparece só no fim e "a pessoa não sabe do que se trata". Com o preço em cada item, ela vai somando ("vou levar isso, aquilo, o suporte vale tanto, os mapas valem tanto…") e **entende de onde vem** o total.
 - "Para ancorar, você tem que explicar **de onde veio esse valor**."
 - Regra repetida na aula: **"Sempre coloque o preço de tudo isso aqui."**
@@ -111,12 +113,12 @@ Cada entregável de "Tudo que você recebe" precisa de imagem real ou mockup:
 | | Item | Decisão |
 |---|---|---|
 | ✅ | Bloco "Inclui…" | "Que legal. Conteúdo não falta." |
-| ✅ | Bônus **para quem paga à vista**: encontro presencial (*Panim*, "face a face") | Aprovado. ⚠️ A professora perguntou **o que quer dizer "Panim"** → traduzir na própria página (ver regra 2.3). |
-| ✅ | **Acesso vitalício** ("tudo isso chega até você sem pagar de novo") | Aprovado. |
+| ✅ | Bônus **para quem paga à vista**: encontro presencial (*Panim*, "face a face") | Aprovado. ⚠️ Cláudio perguntou **o que quer dizer "Panim"** → traduzir na própria página (ver regra 2.3). |
+| ✅ | **Acesso vitalício ao "Mapa da Montanha"** ("toda essa montanha chega até você sem pagar de novo") | Aprovado. ⚠️ O nome "Mapa da Montanha" veio da transcrição automática; conferir o nome exato na página. |
 | ✅ | **Exclusivos da Turma Fundadora**: selo de fundador (Tzedaká / reconhecimento), **preço de fundador congelado** (o menor valor), **voz na construção** da mentoria | Aprovados. Manter, com preço riscado quando fizer sentido. |
 
 ### 1.12 Bloco de valor e preço (hoje está incongruente)
-**Problema diagnosticado:** o "Tudo isso somado passa de R$ 28 mil" está **pequeno demais** ("tão pititinho que as pessoas não veem"). Logo abaixo vem outro valor (lido como 8.197 / 8.997) e a professora **achou que os R$ 28 mil eram o preço da mentoria**. "Do jeito que eu estava lendo, achei que os 28 eram esse daqui, e não é."
+**Problema diagnosticado:** o "Tudo isso somado passa de R$ 28 mil" está **pequeno demais** ("tão pititinho que as pessoas não veem"). Logo abaixo vem outro valor (lido como 8.197 / 8.997) e Cláudio **achou que os R$ 28 mil eram o preço da mentoria**. "Do jeito que eu estava lendo, achei que os 28 eram esse daqui, e não é."
 
 **Ordem correta, uma camada depois da outra, sem nada no meio:**
 1. **Itens com preço riscado** (1.10).
@@ -152,7 +154,7 @@ Cada entregável de "Tudo que você recebe" precisa de imagem real ou mockup:
 ### 1.16 Insegurança com o preço (argumento para a própria equipe e para objeções)
 - O acompanhamento atual ("Apoio da Raiz") é **presencial, 1 vez por mês**, por cerca de **R$ 320/mês** (aprox. R$ 3.500 a 3.800 por ano). ⚠️ Conferir os números.
 - A mentoria tem encontros **semanais** (cerca de 4 vezes mais encontros) e **muito mais entrega** (Moré, resumos, comunidade, materiais, suporte).
-- Conclusão da professora: **"Não fique insegura, está tranquilo."** O preço se sustenta.
+- Conclusão de Cláudio: **"Não fique insegura, está tranquilo."** O preço se sustenta.
 
 ---
 
@@ -160,7 +162,7 @@ Cada entregável de "Tudo que você recebe" precisa de imagem real ou mockup:
 
 1. **Saber em que estágio o visitante chega** (frio, pós-workshop, em dúvida) e não repetir o que ele já ouviu.
 2. **Zero linguagem interna:** área de membros, flashcard, agente, chat, funil, IA sem explicação, "plataforma própria". Escrever como o leigo fala.
-3. **Traduzir todo termo hebraico** na primeira vez que aparece (Moré = mestre, Panim = face a face, Tefilá = oração, Tzedaká…). A própria professora perguntou o que eram.
+3. **Traduzir todo termo hebraico** na primeira vez que aparece (Moré = mestre, Panim = face a face, Tefilá = oração, Tzedaká…). O próprio Cláudio perguntou o que eram.
 4. **Cada entregável responde:** o quê, onde, quem, quando e como.
 5. **Acesso a pessoas (Rabino, equipe) sempre com limites claros:** quem responde, por qual canal, em que horário. Evita expectativa falsa e reclamação.
 6. **IA sempre declarada como IA** em página de venda (ver conflito com a Oráh na Parte 9).
@@ -182,7 +184,7 @@ Cada entregável de "Tudo que você recebe" precisa de imagem real ou mockup:
 - **A landing page do WORKSHOP é mais importante que a da mentoria.** Os criativos e anúncios são feitos **para ela**, então é ali que vai a maior energia. "O que você criou foi o final do funil."
 - Até quem tem muita experiência foca nela: "na última, ficamos das 2 da tarde às 8 da noite só nessa página".
 - Ela precisa de **comunicação assertiva com o público real**, ou seja, gente que depois **tem condição de pagar a mentoria**. Precisa ter **clareza**, **dor grande** e **desejo grande** ligados ao tema do workshop.
-- ⚠️ A professora vai enviar: **framework de headline**, **passo a passo da LP do workshop** e **passo a passo do que entregar no workshop**. Exemplo de headline (workshop da Tata): *"Em 2 dias você vai ter a sua plataforma própria, sem precisar pagar Hotmart."*
+- ⚠️ Cláudio vai enviar: **framework de headline**, **passo a passo da LP do workshop** e **passo a passo do que entregar no workshop**. Exemplo de headline (workshop da Tata): *"Em 2 dias você vai ter a sua plataforma própria, sem precisar pagar Hotmart."*
 
 ### 3.2 Prazo e público
 - **Pelo menos 30 dias** de antecedência para comunicar, **ativar a base quente** e **chamar público frio**.
@@ -201,7 +203,7 @@ Cada entregável de "Tudo que você recebe" precisa de imagem real ou mockup:
 ### 3.5 Tema
 - **Um tema só e específico.** Workshop sobre muita coisa faz a pessoa ficar satisfeita ali e não comprar.
 - Tirar o tema **da boca do público** (o que mais pedem, perguntam e falam), **nunca do que nós achamos**. Isso "abre a boca do funil". Exemplos: relação homem-mulher, filhos, finanças.
-- Usar as **12 áreas** como gancho (*cliffhanger*): trabalhar **uma** a fundo no workshop e fechar com "você tem as outras 11; na mentoria aprofundamos esta e tratamos as outras".
+- Usar as **12 áreas** (⚠️ trecho ambíguo na transcrição: confirmar se são as 12 áreas da vida) como gancho (*cliffhanger*): trabalhar **uma** a fundo no workshop e fechar com "você tem as outras 11; na mentoria aprofundamos esta e tratamos as outras".
 - Do tema escolhido, definir **o que o Rabino vai construir junto** com a pessoa naquele dia.
 
 ### 3.6 Duração
@@ -227,62 +229,151 @@ Cada entregável de "Tudo que você recebe" precisa de imagem real ou mockup:
 
 ---
 
-## PARTE 5 — Criativos (anúncios)
+## PARTE 5 — Criativos (anúncios): o método do Cláudio, passo a passo
 
-### 5.1 Ordem de criação: **CONTEÚDO/COPY → FORMATO** (nunca o contrário)
-Começar pelo formato causa três problemas:
-1. Demora mais.
-2. Aumenta o risco de **copiar** os outros.
-3. A **mensagem fica truncada**, porque você força a copy a caber no formato.
+> Contexto: André perguntou como criar criativos. Cláudio respondeu com **o processo que ele mesmo usa**. Isto vale para os anúncios que levam para a **página do workshop**.
 
-Exemplo: escolher "tela dividida" primeiro obriga a criar takes para encaixar. Com a copy pronta, você pergunta "isso cabe em caixinha de pergunta? falando direto para a câmera? narração?". Erro comum: storytelling colocado em caixinha de pergunta. **Caixinha de pergunta combina com roteiro de argumentação.**
+### 5.1 Regra de partida: **12 criativos para começar** (10 a 12)
+- Quando você está **começando do zero** (não sabe o que converte, não tem padrão do seu nicho): fazer **10 a 12 criativos**.
+- **Metade (6) do zero** + **metade (6) "Spy"**, ou seja, **modelando o que o mercado já faz**.
+- Por que 12: os 30 dias de campanha são **teste de criativo e é preciso testar rápido**. Dos 12, a expectativa é achar **uns 2 que vendem**; os outros são descartados (ver Parte 7).
+- "A chance de conseguir um resultado melhor é maior do que fazer 100% do zero."
 
-### 5.2 Os 6 tipos de roteiro
-1. **Argumentação**: sua opinião, o seu olhar.
-2. **Diálogo**: uma pessoa falando com outra, ou com o próprio "clone".
-3. **Storytelling**:
-   - sua história; ou a de outra pessoa, aluno ou cliente;
-   - ou de **famoso** (*ancoragem em celebridade*): conta a história e, no final, **associa** com a oferta. Exemplo: a história de Sylvester Stallone e Rocky, terminando com "se quiser X, comente a palavra Y".
-4. **Descrição**: descrever a cena ("estava assim, um mouse aqui, uma garrafa ali…").
-5. **Lista**: 1, 2, 3, **com intenção de venda**. "5 dicas" viraliza, mas **viralização não põe dinheiro no bolso**. Juntar o formato de lista, que parece orgânico, com a intenção de vender o workshop.
-6. **Discurso interno**: os próprios pensamentos, aparecendo sem falar ou só narrado.
+### 5.2 A ordem certa: **ROTEIRO → TEMA → COPY → só depois o FORMATO**
+1. Escolher o **tipo de roteiro** (um dos 6 abaixo).
+2. Escolher o **tema**: o que o público **mais fala e mais busca** (Parte 6).
+3. Escrever a **copy** (a mensagem do anúncio) **com intenção de vender o workshop**.
+4. **Só no fim** escolher o **formato** (talking head, tela dividida, caixinha de pergunta, narração…).
 
-**Fluxo:** escolher o **roteiro** → escolher o **tema** (o que o público mais fala e busca; ver Parte 6) → escrever com **intenção de vender o workshop** → só então escolher o **formato**.
+**Por que nunca começar pelo formato** (3 motivos):
+1. **Demora mais.**
+2. **Risco grande de copiar os outros.**
+3. **A mensagem fica truncada**: você força a sua ideia a caber no formato.
 
-### 5.3 Primeiro lote
-- **10 a 12 criativos**: **metade do zero, metade modelando o mercado** ("spy"). Modelar é adaptar o que outra pessoa já validou com dinheiro, **não copiar e colar**. A chance de resultado é maior do que fazer 100% do zero.
-- **Mostrar o entregável** do workshop no anúncio: se for um mapa, **mockup do mapa**.
-- Duração de referência: a referência tem ~50 s; o nosso pode ter **1min20 a 2 min**.
+**Exemplo dado:** o formato mais usado no seu nicho é "tela dividida" → você já fica obrigado a ter "take disso, take daquilo" e encaixa a copy no formato. O certo é o inverso: **fecha a copy primeiro**, depois pergunta "isso cabe numa caixinha de pergunta? falando direto para a câmera? em narração?".
+**Armadilha:** se você escolhe antes "caixinha de pergunta", fica **engessado**; no fim percebe que fazia mais sentido uma tela dividida porque o roteiro era storytelling. **Caixinha de pergunta combina muito mais com roteiro de argumentação.**
+"Você faz muito mais criativos assim do que ao contrário."
 
-### 5.4 Referência validada na Biblioteca de Anúncios
-- **Nicodemos Lopes**: anúncio no ar desde **14/04/2025** (~1,5 ano), com **várias versões**. Vende e-book/planner de estudo bíblico por **R$ 27** (low ticket, mas serve de modelo).
-  - Estrutura: *talking head* (rosto falando, andando, em movimento) → **demonstração** (abre o e-book).
-  - Copy: "Você sente que a sua rotina está atrapalhando sua leitura da Bíblia? … um método simples e prático … 15 minutos por dia … compreender e aplicar na sua vida…"
-  - A professora vai mandar o **ID da biblioteca** no chat; é só buscar o número na Biblioteca de Anúncios.
-- Outros vistos na busca "ler a Bíblia": *Bible Offline* (19/09, criativo de texto usado em 2 anúncios) e um de 27/07. Também aparecem resultados irrelevantes (ex.: livros de finanças), então **filtre**.
+### 5.3 Os 6 tipos de roteiro (do jeito que o Cláudio os explicou)
+> "Para mim é muito mais fácil fazer desse jeito. **Sempre que vou escrever, começo pensando nesses roteiros.** Qual roteiro vou fazer? E qual tema vou falar?"
 
-### 5.5 Como saber se um anúncio (nosso ou do mercado) está validado
-- **Tempo de veiculação:** mais de **1 mês** = rodando bem; **quanto mais antigo, melhor**.
-- **Quantidade** de anúncios e variações do anunciante (duplicar é menos comum hoje do que antes).
-- Extensão de Chrome **Ad Sparrow**: mostra as duplicações.
-- Nos **nossos** testes: sem resultado em **2–3 dias**, descarta (há quem espere até 30 dias; a professora não).
+| # | Roteiro | O que é (nas palavras da aula) | Detalhes e exemplo | Pergunta-guia para nós* |
+|---|---|---|---|---|
+| 1 | **Argumentação** | Aquele em que você coloca **o seu olhar, a sua opinião**. | Combina bem com a **caixinha de pergunta**. | Que opinião do Rabino sobre ler a Bíblia o público ainda não ouviu? |
+| 2 | **Diálogo** | **Uma pessoa falando com a outra**. Pode ser **a mesma pessoa falando consigo, em "clone"**. | Duas vozes/personagens no mesmo vídeo. | Que conversa real entre dois leitores da Bíblia mostra a dor? |
+| 3 | **Storytelling** | **História que você viveu**, ou **vivida com outra pessoa**, ou de um **cliente / paciente / alguém que você atendeu**. Também vale **a história de outra pessoa** e **casos de pessoas famosas**. | **Ancoragem em celebridade:** conta a história do famoso e, **no final, faz a associação com o que você oferece**. Exemplo dado: **Rocky Balboa / Sylvester Stallone** (escreveu o roteiro do filme, vendeu o próprio cachorro, conseguiu…) → *"e se você quiser fazer roteiros tão bons assim, **digite a palavra X** e receba Y"*. | Que história (de um aluno, do Rabino ou de um personagem conhecido) termina em "tinha a Bíblia na mão e não entendia"? |
+| 4 | **Descrição** | **Descrever a cena.** | "É básica; os arquitetos usam muito, mas qualquer pessoa que queira descrever a cena pode usar." Ex.: *"estava assim: um mouse aqui, uma garrafa ali…"*. | Que cena (a Bíblia na mesa de cabeceira, o caderno cheio de anotações) o público reconhece? |
+| 5 | **Lista** | **Pontuar 1, 2, 3, mas com intenção.** | Muito anúncio faz "vou te dar 5 dicas…" e **viraliza, mas viralização não traz dinheiro no seu bolso**. A sacada: **juntar a lista, que parece orgânica, com intenção de venda** (vender o workshop). | Quais "3 sinais de que você lê a Bíblia em pedaços" levam para o workshop? |
+| 6 | **Discurso interno** | **O nosso pensamento.** | Normalmente feito **aparecendo sem falar**, ou **sem aparecer e só narrado**: um roteiro com os **pensamentos** da pessoa. | Que pensamento o leitor tem no culto/na leitura que nunca diz em voz alta? |
+
+\* A coluna "Pergunta-guia" é **sugestão minha** para aplicar ao nosso caso, não faz parte da aula. As outras colunas vêm da aula.
+
+### 5.4 Como cruzar roteiro × formato (depois da copy pronta)
+| Formato citado | Combina com | Observação da aula |
+|---|---|---|
+| **Caixinha de pergunta** | Argumentação | Não serve para storytelling. |
+| **Tela dividida** | Quando o roteiro pede **vários takes** | Obriga a produzir "take disso, take daquilo". |
+| **Falando direto para a câmera** (talking head) | Argumentação, storytelling | Referência: o anúncio do Nicodemos Lopes começa com o rosto, em movimento. |
+| **Narração** | Discurso interno, descrição | Pode ser **sem aparecer**, só narrado. |
+| **"Clone"** | Diálogo | A mesma pessoa conversando consigo. |
+| **Demonstração do produto** | Qualquer um | Abrir o e-book / **mostrar o mapa** (mockup). |
+| **Criativo de texto** | Qualquer um | Visto no anúncio "Bible Offline" (ver 6.3). |
+
+### 5.5 Mostrar o que será entregue
+- O anúncio deve **mostrar o entregável do workshop**. "Ah, é o mapa? **Então mostra o mapa.** Tem que fazer esse mockup."
+- Frase do anúncio de referência: *"Ele foi escrito, preparado por mim, exatamente para suprir essa sua necessidade."*
+
+### 5.6 Duração
+- A referência (Nicodemos) tem **~50 s**; "é até bom que passe": **1 min, 1min20, 1min30, até 2 min** são aceitáveis.
+
+### 5.7 "Spy" / modelagem
+- **Modelar ≠ copiar e colar.** É usar como **referência** o que já está dando certo. "Se essa pessoa já colocou dinheiro e já validou aquilo, **por que não usar adaptando para você?**"
+- O que se modela: **estrutura, ritmo, formato e tipo de roteiro** (não o texto).
+- Ao observar **nichos primos**, olhar só **o formato** ("esquece a copy").
+
+### 5.8 Fluxo resumido para cada criativo
+`Pesquisa (Parte 6) → tipo de roteiro (1 dos 6) → tema → copy com intenção de vender o workshop → formato → mockup do entregável → subir → medir (Parte 7)`
+
+### 5.9 Roteiro de produção dos 12 (proposta de uso)
+| Bloco | Qtde | Como |
+|---|---|---|
+| **Do zero** | 6 | Um criativo para **cada tipo de roteiro** (os 6), todos sobre o mesmo tema do workshop. |
+| **Modelados (Spy)** | 6 | Baseados em anúncios vencedores da Biblioteca de Anúncios (Parte 6), em **religião** e **nichos primos**, adaptando ao nosso tema. |
+
+*(Esta divisão 6 roteiros × 6 criativos do zero é proposta minha para organizar o trabalho; a aula diz "6 do zero, 6 modelando".)*
 
 ---
 
 ## PARTE 6 — Pesquisa e benchmark (antes de criar qualquer coisa)
 
-- **Biblioteca de Anúncios da Meta:** buscar termos do nicho ("ler a Bíblia"), filtro **"anúncios ativos"**.
-- **Nicho + nichos primos:**
-  - nicho = **religião / Bíblia**;
-  - nicho primo = público com o **mesmo estado emocional** ou que fala de algo parecido: **espiritualidade** (ex.: lei da atração). Exemplo de outro mercado: emagrecimento ↔ renda extra (não "dívida").
-  - Nos primos, olhar **formatos** (não a copy).
-- **O que o público quer**, quando ainda não temos esse dado:
-  - **autocompletar do Google e do YouTube**;
-  - **vídeos mais vistos** do nicho no YouTube;
-  - **comentários** em vídeos do nicho no YouTube, TikTok e Instagram.
-- O resultado vira: **temas do workshop**, **temas dos criativos** e **linguagem da página**.
-- Saber "qual é a régua" do mercado: o que as pessoas buscam, o que estão vendendo e como vendem.
-- "Investir 1–2 dias em pesquisa custa muito mais barato. Muita gente negligencia, e faz toda a diferença."
+> Cláudio: "A pesquisa é muito boa para ver o que está acontecendo no mercado: o que as pessoas estão buscando, o que estão vendendo, qual é a **régua**. Não é para copiar, mas **a gente precisa saber o que está acontecendo**. Fazer esse **benchmark é imprescindível**; muita gente negligencia. **Custa muito mais barato perder um dia, dois dias** investindo nisso. Depois você só vai encaixando: já sabe o que as pessoas falam e como vendem. Fica mais leve criar os criativos."
+
+> ⚠️ **Não confundir:** a ferramenta de pesquisa é a **Biblioteca de Anúncios** da Meta. O **Gerenciador de Anúncios** é onde rodamos nossas campanhas.
+
+### 6.1 Pesquisa de anúncios, passo a passo (como foi demonstrado ao vivo)
+1. Abrir a **Biblioteca de Anúncios** da Meta (compartilhando a tela, o Cláudio usou a opção de **todos os anúncios**).
+2. **Buscar um termo do nicho**: "**ler a Bíblia**".
+3. Filtrar por **"Somente anúncios ativos"** (os que estão rodando agora).
+4. Instalar a extensão **Ad Sparrow** (indicada; "se vocês quiserem baixar, pode baixar") para ver **quando o anúncio começou** e **se foi duplicado** (quantas cópias do mesmo criativo).
+5. Para cada anúncio, anotar: **data de início**, **quantas versões/duplicações**, **quantos anúncios o anunciante tem**, **formato**, **gancho** e **o que vende**.
+6. **Descartar resultados irrelevantes.** A busca devolve anúncios sem relação (ex.: livros de educação financeira, "Primo Pobre", "outros 500") porque a palavra aparece em algum lugar.
+7. Salvar o **ID/nome do anunciante** para consultar depois (Cláudio enviou o do Nicodemos no chat: "depois é só colocar esse número na biblioteca que você acha").
+
+⚠️ O Cláudio comentou ter outras extensões e preferiu **não indicar** ("não vou falar para vocês colocarem"); só o Ad Sparrow foi recomendado. O trecho está confuso na transcrição.
+
+### 6.2 Como saber se um anúncio do mercado está "escalado" (validado)
+| Sinal | Regra dada |
+|---|---|
+| **Tempo de veiculação** | **Mais de 1 mês** rodando = já está rodando bem. **Quanto mais antigo, melhor.** Há quem teste em até 30 dias, então 1 mês é só o piso. |
+| **Anúncio que rodou 2–3 dias** | **"Eu já descarto"** como referência. (Esta regra é sobre **anúncios dos outros** que a gente analisa, não sobre os nossos testes.) |
+| **Quantidade de anúncios do anunciante** | Quanto mais anúncios o mesmo anunciante mantém, mais sinal de que funciona. |
+| **Duplicação** | "Hoje em dia as pessoas não duplicam tanto, antigamente era muito mais." Ainda assim, **várias versões do mesmo criativo** = sinal de vencedor. |
+
+### 6.3 O que apareceu na busca "ler a Bíblia" (para vocês verem)
+| Anúncio | Dado observado | Leitura do Cláudio |
+|---|---|---|
+| **Anúncio de 24/04** (datas no áudio podem estar trocadas) com 2 cópias | O Ad Sparrow mostrou **duplicação**. | Era de educação financeira ("Primo Pobre"), **não relevante**: apareceu na busca por engano. |
+| **Bible Offline** | No ar desde **setembro**; **2 anúncios** com o **mesmo criativo de texto**. | "**Esse é um anúncio que está dando bom.**" Serve para ver se **criativo de texto** é o tipo que queremos. |
+| **Anúncio de 27/07** | 2 anúncios criativos. | "**Quanto mais longe/antigo, melhor.**" |
+| **Nicodemos Lopes** (a joia do exemplo) | No ar desde **14/04/2025**: **~1 ano e meio**, "daqui a pouco dois anos"; **várias versões**; vende **e-book/planner de estudo bíblico por R$ 27** (**low ticket**). | **O melhor modelo para estudar** (detalhes em 6.4). |
+
+⚠️ As datas na transcrição (2025/2026) aparecem inconsistentes com a data da aula; conferir na Biblioteca.
+
+### 6.4 Estudo do anúncio do Nicodemos Lopes (modelo de referência)
+- **Gancho (copy):** *"Você sente que a sua rotina está atrapalhando a sua leitura da Bíblia?"*
+- **Promessa:** *"A boa notícia é que existe um método simples e prático que pode ajudar a estudar as Escrituras todos os dias em apenas 15 minutos."*
+- **Virada:** *"E se fosse hoje o dia em que você começasse a estudar a Bíblia profundamente, ler com proveito… 15 minutos por dia para estudar a Palavra de Deus, compreender o seu significado e aplicar à sua vida…"*
+- **Estrutura visual:** começa com **talking head** (rosto, pessoa andando/se movimentando) → **abre a demonstração do e-book** → fala do produto.
+- **Duração:** ~**50 segundos**.
+- **Produto:** e-book/planner a **R$ 27** (low ticket), mas "pega como exemplo, porque dá certo e está escalado há um ano e meio".
+- **Lição:** "Mostrar o que vai entregar." No nosso caso, **mockup do mapa** do workshop.
+- **Uso:** "Vai na biblioteca, **faz essa checagem**… é para ter referência."
+
+### 6.5 Nicho e **nichos primos**
+- **Nicho:** o nosso é **religião** (Bíblia).
+- **Nicho primo:** nicho cujo público tem o **mesmo estado emocional** ou **fala de algo parecido**.
+  - Exemplo de outro mercado: **emagrecimento** ↔ **renda extra** ("a vibe da galera está lá": quero emagrecer, ficar bonitona, no shape ↔ quero ganhar mais). Atenção: é renda extra, **não dívida**.
+  - Para nós: quem fala diretamente de **religião** e, provavelmente, **espiritualidade** ⚠️ (o Cláudio hesitou e chegou a "espiritualidade" depois de uma ajuda do grupo; um exemplo vago de "como a galera fala que atrai" pode ser "lei da atração").
+- **O que olhar nos primos:** **somente os formatos** que mais estão sendo veiculados ("esquece copy, os formatos"). Mas **sem começar pelo formato** ao criar (5.2).
+
+### 6.6 Pesquisa do **público** (para escolher o tema do workshop e dos criativos)
+Primeiro, o que já temos "dentro da nossa inteligência e do nosso negócio" (o que o público já nos pergunta). Se não tivermos, buscar fora:
+- **Autocompletar do Google**.
+- **Autocompletar do YouTube**.
+- **O que mais é visualizado** no YouTube sobre o nicho.
+- **O que as pessoas mais comentam** nos vídeos do nicho no YouTube.
+- **Comentários no TikTok**.
+- **Comentários no Instagram**.
+> "Eu vou analisar o que o público está querendo e trazer isso para o meu workshop, com a intenção de venda para o workshop."
+
+*(Sugestão minha, não da aula: também usar as perguntas reais de leads no WhatsApp/Oráh e nos comentários dos nossos próprios posts.)*
+
+### 6.7 Roteiro prático de 1–2 dias de pesquisa (proposta de uso)
+- [ ] **Dia 1 manhã:** Biblioteca de Anúncios: "ler a Bíblia", "estudar a Bíblia", outros termos do nosso tema; filtro "ativos"; Ad Sparrow.
+- [ ] **Dia 1 tarde:** registrar os **10 melhores** (≥ 1 mês no ar) e os **formatos**; conferir **nichos primos**.
+- [ ] **Dia 2 manhã:** pesquisa do **público**: Google/YouTube (autocompletar, mais vistos, comentários), TikTok e Instagram.
+- [ ] **Dia 2 tarde:** escolher o **tema** (o que mais aparece) e distribuir os **6 roteiros × tema**; definir **6 modelos de referência** para os "Spy".
+- [ ] Registrar em planilha: anunciante · link/ID · data de início · nº de versões · formato · roteiro · gancho · duração · produto/preço.
 
 ---
 
@@ -331,11 +422,11 @@ Exemplo: escolher "tela dividida" primeiro obriga a criar takes para encaixar. C
 
 ## PARTE 9 — Conflitos e decisões que só vocês podem tomar
 
-1. ⚠️ **Oráh × "deixar claro que é IA".** A *skill-orah* diz que a Oráh **nunca** diz que é robô ou IA. A aula pede que a página diga claramente que o **Moré é IA** e que a "equipe" do Suporte VIP inclui IA. Decidir:
+1. ⚠️ **Oráh × "deixar claro que é IA".** A *skill-orah* diz que a Oráh **nunca** diz que é robô ou IA. A aula pede que a página diga claramente que o **Moré é IA** e que a "equipe" do Suporte VIP é **IA + Cláudia (quando preciso)**. Decidir:
    - a linha da página;
    - se a Oráh atende mentorados;
    - como ela se apresenta para eles.
-2. ⚠️ **Oráh não responde em grupos** (regra 6 da skill). Então **quem responde no grupo de WhatsApp** dos mentorados? O Rabino, alguém da equipe, monitores?
+2. ⚠️ **Oráh não responde em grupos** (regra 6 da skill). Então **quem responde no grupo de WhatsApp** dos mentorados? Cláudia, o Rabino, monitores?
 3. ⚠️ **Limites do Rabino:** ele participa do grupo? Em que dias e horários? O Suporte VIP tem horário?
 4. ⚠️ **Preços finais:** normal R$ 8.997 e fundador R$ 4.997 (descartar 8.197 e 5.997?).
 5. ⚠️ **Preço individual** de cada item e bônus, para riscar.
@@ -372,7 +463,38 @@ Exemplo: escolher "tela dividida" primeiro obriga a criar takes para encaixar. C
 **Criativos e tráfego**
 - [ ] Escrevi a copy antes de escolher o formato?
 - [ ] Tenho 12 criativos (6 do zero + 6 modelados) mostrando o entregável?
+- [ ] Usei os **6 tipos de roteiro** (argumentação, diálogo, storytelling, descrição, lista, discurso interno)?
+- [ ] Fiz a pesquisa na Biblioteca de Anúncios (ativos, ≥ 1 mês, nichos primos, Ad Sparrow) antes de criar?
+- [ ] Pesquisei o que o público fala (Google/YouTube/TikTok/Instagram) para escolher o tema?
 - [ ] O orçamento diário de teste é ≤ o valor do ingresso?
 - [ ] O anúncio e a página falam **a mesma coisa**?
 - [ ] O link da bio aponta para o checkout do workshop?
 - [ ] Toda a comunicação está focada no workshop?
+
+---
+
+## PARTE 11 — Pontos ambíguos da transcrição (conferir na gravação)
+
+A transcrição é automática e tem trechos trocados. Estes pontos merecem ser ouvidos de novo antes de decidir:
+1. **Preços:** 8.197 × 8.997 (normal) e 5.997 × 4.997 (fundador).
+2. **"Mapa da Montanha"**, **"chamarra"** e **"Tzedaká / reconhecimento acreditado"** (nomes dos bônus de fundador).
+3. **"Quem diz garantia, risca…"** (trecho da garantia): confirmar se a garantia fica como está.
+4. **"Você trata as 12 áreas dentro do workshop"**: a leitura mais provável é que o workshop trabalha **uma** área e cita as outras 11.
+5. **Extensões de Chrome** que Cláudio preferiu não indicar.
+6. **Datas dos anúncios** vistos na Biblioteca (2025 × 2026).
+7. **Nicho primo "espiritualidade"** (Cláudio hesitou antes de chegar nele).
+8. **"Funil de VSL" e ticket "2 9 7"**: citados de passagem como exemplo de outro cliente, sem relação direta com o nosso funil.
+
+## PARTE 12 — Mapa de cobertura da aula
+
+| Trecho da aula | Onde está |
+|---|---|
+| Revisão da página da mentoria (topo → chamada final) | Partes 0 e 1 |
+| Insegurança com o preço (R$ 320/mês × mentoria semanal) | 1.16 |
+| Workshop pago: formato, tema, ticket, duração, bônus, headline | Parte 3 |
+| Hotmart × InfinitePay (testes A/B) | Parte 4 |
+| Criativos: 12 para começar, copy antes do formato, **6 tipos de roteiro** | Parte 5 |
+| Pesquisa: Biblioteca de Anúncios, Ad Sparrow, nichos primos, Nicodemos, pesquisa do público | Parte 6 |
+| Orçamento de teste, métricas, congruência, orgânico, link da bio, YouTube | Parte 7 |
+| Skills nossas relacionadas | Parte 8 |
+| Conflitos e decisões nossas | Parte 9 |
